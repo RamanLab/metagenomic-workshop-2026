@@ -318,7 +318,8 @@
     <a class="sidebar-link" onclick="navTo('#audience')"><span class="s-dot"></span>Who Should Attend</a>
     <a class="sidebar-link" onclick="navTo('#fees')"><span class="s-dot"></span>Registration Fees</a>
     <a class="sidebar-link" onclick="navTo('#resources')"><span class="s-dot"></span>Resources</a>
-    <a class="sidebar-link" onclick="navTo('#contact')"><span class="s-dot"></span>Register & Contact</a>
+    <a class="sidebar-link" onclick="navTo('#logistics')"><span class="s-dot"></span>Venue &amp; Logistics</a>
+    <a class="sidebar-link" onclick="navTo('#contact')"><span class="s-dot"></span>Register &amp; Contact</a>
   </div>
 
   <div class="sidebar-section">
@@ -468,7 +469,7 @@
         </div>
         <div class="info-card">
           <div class="info-icon">✉️</div>
-          <div><div class="info-label">Queries</div><div class="info-val"><a href="mailto:nptelplus-workshop@nptel.iitm.ac.in" style="color:var(--accent4);">nptelplus-workshop@nptel.iitm.ac.in</a></div></div>
+          <div><div class="info-label">Queries</div><div class="info-val"><a href="/cdn-cgi/l/email-protection#8fe1fffbeae3ffe3fafca2f8e0fde4fce7e0ffcfe1fffbeae3a1e6e6fbe2a1eeeca1e6e1" style="color:var(--accent4);"><span class="__cf_email__" data-cfemail="137d6367767f637f66603e647c6178607b7c63537d6367767f3d7a7a677e3d72703d7a7d">[email&#160;protected]</span></a></div></div>
         </div>
       </div>
     </div>
@@ -748,6 +749,166 @@
 </section>
 <div class="divider"></div>
 
+<!-- VENUE & LOGISTICS -->
+<style>
+  .logistics-layout{display:grid;grid-template-columns:240px 1fr;gap:2rem;margin-top:2.5rem;align-items:start;}
+  .logistics-panel{background:var(--card);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;position:sticky;top:72px;}
+  .logistics-panel-header{padding:1rem 1.2rem;border-bottom:1px solid var(--border);background:var(--accent-dim);}
+  .logistics-panel-title{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);}
+  .logistics-nav-item{display:flex;align-items:center;gap:0.7rem;padding:0.7rem 1.2rem;font-size:0.82rem;color:var(--muted);cursor:pointer;border-left:2px solid transparent;transition:all 0.18s;border-bottom:1px solid var(--border);}
+  .logistics-nav-item:last-child{border-bottom:none;}
+  .logistics-nav-item:hover,.logistics-nav-item.active{color:var(--accent);border-left-color:var(--accent);background:var(--accent-dim);}
+  .logistics-nav-item .l-icon{font-size:0.9rem;width:18px;text-align:center;}
+  .logistics-main{display:flex;flex-direction:column;gap:1.2rem;}
+  .l-block{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1.6rem 1.8rem;scroll-margin-top:80px;}
+  .l-block-header{display:flex;align-items:center;gap:0.6rem;margin-bottom:1.2rem;padding-bottom:0.9rem;border-bottom:1px solid var(--border);}
+  .l-block-icon{font-size:1.1rem;}
+  .l-block-label{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);}
+  .l-row{display:flex;flex-direction:column;gap:0.2rem;margin-bottom:1rem;}
+  .l-row:last-child{margin-bottom:0;}
+  .l-key{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);}
+  .l-val{font-size:0.88rem;color:var(--text);line-height:1.6;}
+  .l-val strong{color:var(--accent2);}
+  .l-maps-btn{display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;font-family:var(--mono);font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);background:var(--accent-dim);border:1px solid var(--border2);border-radius:4px;padding:0.4rem 0.85rem;transition:all 0.2s;text-decoration:none;}
+  .l-maps-btn:hover{border-color:var(--accent);}
+  .l-food-item{display:flex;gap:0.8rem;align-items:flex-start;padding:0.75rem 0;border-bottom:1px solid var(--border);}
+  .l-food-item:last-child{border-bottom:none;padding-bottom:0;}
+  .l-food-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);margin-top:0.35rem;flex-shrink:0;}
+  .l-food-name{font-size:0.88rem;color:var(--text);font-weight:500;margin-bottom:0.1rem;}
+  .l-food-loc{font-size:0.78rem;color:var(--muted);}
+  .l-req-item{display:flex;gap:0.9rem;align-items:flex-start;padding:0.9rem 0;border-bottom:1px solid var(--border);}
+  .l-req-item:last-child{border-bottom:none;padding-bottom:0;}
+  .l-req-check{width:20px;height:20px;border-radius:4px;background:rgba(251,191,36,0.12);border:1px solid rgba(251,191,36,0.3);display:flex;align-items:center;justify-content:center;font-size:0.7rem;color:var(--accent3);flex-shrink:0;margin-top:0.1rem;}
+  .l-req-title{font-size:0.88rem;color:var(--text);font-weight:500;margin-bottom:0.2rem;}
+  .l-req-desc{font-size:0.78rem;color:var(--muted);line-height:1.6;}
+  .l-github-btn{display:inline-flex;align-items:center;gap:0.5rem;font-family:var(--mono);font-size:0.65rem;letter-spacing:0.08em;color:var(--accent);background:var(--accent-dim);border:1px solid var(--border2);border-radius:4px;padding:0.5rem 1rem;margin-top:0.9rem;transition:all 0.2s;text-decoration:none;}
+  .l-github-btn:hover{border-color:var(--accent);}
+  .l-campus-note{font-size:0.88rem;color:var(--muted);line-height:1.8;}
+  .l-campus-note strong{color:var(--text);}
+  @media(max-width:700px){.logistics-layout{grid-template-columns:1fr;}.logistics-panel{position:static;display:flex;flex-wrap:wrap;gap:0;}.logistics-panel-header{width:100%;}.logistics-nav-item{flex:1 1 auto;border-left:none;border-bottom:2px solid transparent;border-right:1px solid var(--border);justify-content:center;}.logistics-nav-item.active,.logistics-nav-item:hover{border-bottom-color:var(--accent);border-left-color:transparent;}}
+</style>
+
+<section id="logistics">
+  <div class="wrapper">
+    <div class="sec-tag fade-up">On-Site Guide</div>
+    <h2 class="sec-title fade-up">Venue &amp; <em>Logistics</em></h2>
+    <p class="sec-lead fade-up">Everything you need to know before you arrive.</p>
+
+    <div class="logistics-layout fade-up">
+
+      <!-- LEFT PANEL -->
+      <div class="logistics-panel">
+        <div class="logistics-panel-header">
+          <div class="logistics-panel-title">Quick Navigation</div>
+        </div>
+        <div class="logistics-nav-item active" onclick="lNav('l-location',this)">
+          <span class="l-icon">📍</span> Location
+        </div>
+        <div class="logistics-nav-item" onclick="lNav('l-dining',this)">
+          <span class="l-icon">🍴</span> Dining
+        </div>
+        <div class="logistics-nav-item" onclick="lNav('l-requirements',this)">
+          <span class="l-icon">⚠️</span> Requirements
+        </div>
+        <div class="logistics-nav-item" onclick="lNav('l-resources',this)">
+          <span class="l-icon">🏛️</span> Resources
+        </div>
+        <div class="logistics-nav-item" onclick="lNav('l-campus',this)">
+          <span class="l-icon">🦌</span> Campus Life
+        </div>
+      </div>
+
+      <!-- RIGHT MAIN -->
+      <div class="logistics-main">
+
+        <!-- Location -->
+        <div class="l-block" id="l-location">
+          <div class="l-block-header">
+            <span class="l-block-icon">📍</span>
+            <span class="l-block-label">Precise Location</span>
+          </div>
+          <div class="l-row">
+            <span class="l-key">Venue</span>
+            <span class="l-val"><strong>NAC 2</strong> — New Academic Complex, Block 2<br>IIT Madras, Chennai 600036</span>
+          </div>
+          <div class="l-row">
+            <span class="l-key">Room</span>
+            <span class="l-val"><strong>DA632</strong> — 6th Floor</span>
+          </div>
+          <a class="l-maps-btn" href="https://maps.google.com/?q=NAC+2+IIT+Madras+Chennai" target="_blank">↗ View on Google Maps</a>
+        </div>
+
+        <!-- Dining -->
+        <div class="l-block" id="l-dining">
+          <div class="l-block-header">
+            <span class="l-block-icon">🍴</span>
+            <span class="l-block-label">Dining Options — Inside IITM</span>
+          </div>
+          <div class="l-food-item">
+            <span class="l-food-dot"></span>
+            <div><div class="l-food-name">CC — Campus Cafe</div><div class="l-food-loc">Near the residential area</div></div>
+          </div>
+          <div class="l-food-item">
+            <span class="l-food-dot"></span>
+            <div><div class="l-food-name">CCD — Café Coffee Day</div><div class="l-food-loc">Near the Department of Management Studies</div></div>
+          </div>
+          <div class="l-food-item">
+            <span class="l-food-dot"></span>
+            <div><div class="l-food-name">Isthara — Himalaya Food Court</div><div class="l-food-loc">Located in the Himalaya Mess Complex</div></div>
+          </div>
+        </div>
+
+        <!-- Requirements -->
+        <div class="l-block" id="l-requirements">
+          <div class="l-block-header">
+            <span class="l-block-icon">⚠️</span>
+            <span class="l-block-label">Mandatory Requirements</span>
+          </div>
+          <p style="font-size:0.82rem;color:var(--muted);margin-bottom:0.8rem;line-height:1.7;">To receive your <strong style="color:var(--text);">Certificate of Participation</strong>, the following criteria are strictly enforced:</p>
+          <div class="l-req-item">
+            <span class="l-req-check">✓</span>
+            <div><div class="l-req-title">100% Attendance</div><div class="l-req-desc">Present for all sessions — April 7–9, 2026 (09:00 AM – 06:00 PM IST)</div></div>
+          </div>
+          <div class="l-req-item">
+            <span class="l-req-check">✓</span>
+            <div><div class="l-req-title">Assignments</div><div class="l-req-desc">Completion of all daily hands-on practicals and assigned tasks</div></div>
+          </div>
+        </div>
+
+        <!-- Resources -->
+        <div class="l-block" id="l-resources">
+          <div class="l-block-header">
+            <span class="l-block-icon">🏛️</span>
+            <span class="l-block-label">Where to Start</span>
+          </div>
+          <p style="font-size:0.85rem;color:var(--muted);line-height:1.75;">Access all workshop course materials and open-source resources at the official lab repository:</p>
+          <a class="l-github-btn" href="https://github.com/ramanlab/workshop" target="_blank" rel="noopener noreferrer">⚗️ Raman Lab · github.com/ramanlab/workshop ↗</a>
+        </div>
+
+        <!-- Campus -->
+        <div class="l-block" id="l-campus">
+          <div class="l-block-header">
+            <span class="l-block-icon">🦌</span>
+            <span class="l-block-label">Dynamic Campus Life</span>
+          </div>
+          <p class="l-campus-note">Enjoy the unique atmosphere of IIT Madras — where state-of-the-art research facilities coexist with a protected forest. Keep an eye out for the resident <strong>Blackbuck and spotted deer</strong> often seen near the academic blocks!</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function lNav(blockId, el) {
+    document.querySelectorAll('.logistics-nav-item').forEach(i => i.classList.remove('active'));
+    el.classList.add('active');
+    const target = document.getElementById(blockId);
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+</script>
+<div class="divider"></div>
+
 <!-- CONTACT / REGISTER -->
 <section id="contact">
   <div class="wrapper">
@@ -758,7 +919,7 @@
         <div class="contact-info-rows">
           <div class="c-row">
             <span class="c-ico">✉️</span>
-            <div><div class="c-lbl">Email</div><div class="c-val"><a href="mailto:nptelplus-workshop@nptel.iitm.ac.in">nptelplus-workshop@nptel.iitm.ac.in</a></div></div>
+            <div><div class="c-lbl">Email</div><div class="c-val"><a href="/cdn-cgi/l/email-protection#17796763727b677b62643a6078657c647f786757796763727b397e7e637a397674397e79"><span class="__cf_email__" data-cfemail="254b555140495549505608524a574e564d4a55654b555140490b4c4c51480b44460b4c4b">[email&#160;protected]</span></a></div></div>
           </div>
           <div class="c-row">
             <span class="c-ico">📍</span>
@@ -792,6 +953,7 @@
         <a href="#instructors">Instructors</a>
         <a href="#fees">Fees</a>
         <a href="#resources">Resources</a>
+        <a href="#logistics">Logistics</a>
         <a href="#contact">Contact</a>
         <a href="https://github.com/ramanlab/workshop" rel="noopener noreferrer" target="_blank">GitHub ↗</a>
       </div>
@@ -799,7 +961,7 @@
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   /* PARTICLE NETWORK — exact bg.html style */
   const canvas = document.getElementById('bg-canvas');
   const ctx = canvas.getContext('2d');
@@ -920,18 +1082,11 @@
     }
   }
   // Run after DOM is ready
-  if(document.readyState==='loading'){
-    document.addEventListener('DOMContentLoaded',initFadeUp);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initFadeUp);
   } else {
     initFadeUp();
   }
-  // Also mark anything already in viewport immediately on load
-  window.addEventListener('load',()=>{
-    document.querySelectorAll('.fade-up').forEach(el=>{
-      const r=el.getBoundingClientRect();
-      if(r.top<window.innerHeight){el.classList.add('visible');}
-    });
-  });
 </script>
 </body>
 </html>
