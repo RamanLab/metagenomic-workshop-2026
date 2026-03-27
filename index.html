@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Computational Metagenomics Workshop 2026 | IIT Madras</title>
-  <meta name="description" content="National Workshop on Computational Metagenomics: Methods and Applications — April 7–9, 2026 at IIT Madras. Hosted by NPTEL+ and Wadhwani School of Data Science & AI." />
+  <meta name="description" content="National Workshop on Computational Metagenomics Methods and Applications — April 7–9, 2026 at IIT Madras. Hosted by NPTEL+ and Wadhwani School of Data Science & AI." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -44,6 +44,22 @@
       --text: #111827;
       --muted: #6b7280;
       --muted2: #d1d5db;
+    }
+    body.dark {
+      --bg: #020a06;
+      --surface: #051209;
+      --card: #081810;
+      --card2: #0b1e14;
+      --border: rgba(52,211,153,0.13);
+      --border2: rgba(52,211,153,0.25);
+      --accent: #34d399;
+      --accent-dim: rgba(52,211,153,0.10);
+      --accent2: #6ee7b7;
+      --accent3: #fbbf24;
+      --accent4: #38bdf8;
+      --text: #e8faf2;
+      --muted: #5a8a72;
+      --muted2: #2d5440;
     }
     body.blue {
       --bg: #03080f;
@@ -199,13 +215,13 @@
     .day-body{display:none;border-top:1px solid var(--border);}
     .day-card.open .day-body{display:block;}
     .schedule-table{width:100%;border-collapse:collapse;}
-    .schedule-table td{padding:0.65rem 1.5rem;font-size:0.83rem;border-bottom:1px solid var(--border2);vertical-align:top;}
+    .schedule-table td{padding:0.7rem 1.5rem;font-size:0.86rem;border-bottom:1px solid var(--border2);vertical-align:top;font-family:'Outfit',sans-serif;}
     .schedule-table tr:last-child td{border-bottom:none;}
-    .schedule-table tr.sec-row td{background:rgba(61,224,138,0.04);font-family:var(--mono);font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);padding:0.45rem 1.5rem;}
-    .schedule-table tr.break-row td{color:var(--muted);font-style:italic;font-size:0.8rem;}
+    .schedule-table tr.sec-row td{background:rgba(61,224,138,0.06);font-family:'Instrument Serif',serif;font-size:0.95rem;font-style:italic;color:var(--accent);padding:0.55rem 1.5rem;}
+    .schedule-table tr.break-row td{color:var(--muted);font-style:italic;font-size:0.8rem;font-family:'Instrument Serif',serif;letter-spacing:0.01em;}
     .t-cell{font-family:var(--mono);font-size:0.68rem;color:var(--accent);white-space:nowrap;min-width:110px;}
-    .ev-main{font-weight:500;margin-bottom:0.1rem;}
-    .ev-sub{font-size:0.73rem;color:var(--muted);line-height:1.4;}
+    .ev-main{font-weight:600;margin-bottom:0.15rem;font-family:'Outfit',sans-serif;font-size:0.88rem;letter-spacing:0.005em;}
+    .ev-sub{font-size:0.76rem;color:var(--muted);line-height:1.45;font-family:'Instrument Serif',serif;font-style:italic;}
 
     /* INSTRUCTORS */
     #instructors{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
@@ -252,16 +268,6 @@
     body.blue .fee-btn:hover,.body.blue .fee-card.featured .fee-btn{color:#000;}
     .fee-card.featured .fee-btn:hover{background:var(--accent2);}
 
-    /* RESOURCES */
-    .resources-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;}
-    .res-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1.3rem 1.5rem;display:flex;align-items:flex-start;gap:1rem;transition:all 0.2s;}
-    .res-card:hover{border-color:var(--accent);transform:translateY(-2px);}
-    .res-icon{font-size:1.3rem;flex-shrink:0;margin-top:0.1rem;}
-    .res-type{font-family:var(--mono);font-size:0.52rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:0.2rem;}
-    .res-title{font-family:var(--serif);font-size:1rem;color:var(--text);margin-bottom:0.25rem;}
-    .res-desc{font-size:0.78rem;color:var(--muted);line-height:1.5;}
-    .res-arrow{margin-left:auto;color:var(--muted);font-size:0.8rem;flex-shrink:0;}
-
     /* CONTACT — slim */
     .contact-slim{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:2.5rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;}
     .contact-info-rows{display:flex;flex-direction:column;gap:0.8rem;margin-top:1.5rem;}
@@ -296,16 +302,6 @@
     #hero .fade-up,#hero .hero-eyebrow,#hero .badge-row,#hero .hero-title,
     #hero .hero-subtitle,#hero .hero-desc,#hero .cta-row{opacity:1;transform:none;}
 
-    /* RESPONSIVE */
-    @media(max-width:768px){
-      .topbar{padding:0 1.2rem;}
-      .nav-links,.nav-right .theme-switcher,.nav-right .btn-reg-nav{display:none;}
-      .hamburger{display:flex;}
-      .about-grid,.instr-row,.fees-grid,.resources-grid,.contact-slim{grid-template-columns:1fr;}
-      .stats-row{grid-template-columns:repeat(2,1fr);}
-      .sidebar-toggle{display:none;}
-      #hero{padding:5rem 0 3rem;}
-    }
   </style>
 </head>
 <body class="light">
@@ -331,12 +327,12 @@
     <div class="sidebar-section-label">Sections</div>
     <a class="sidebar-link" onclick="navTo('#hero')"><span class="s-dot"></span>Home</a>
     <a class="sidebar-link" onclick="navTo('#about')"><span class="s-dot"></span>About</a>
+    <a class="sidebar-link" onclick="navTo('#collaborators')"><span class="s-dot"></span>Collaborators</a>
     <a class="sidebar-link" onclick="navTo('#schedule')"><span class="s-dot"></span>Schedule</a>
     <a class="sidebar-link" onclick="navTo('#instructors')"><span class="s-dot"></span>Instructors</a>
     <a class="sidebar-link" onclick="navTo('#audience')"><span class="s-dot"></span>Who Should Attend</a>
     <a class="sidebar-link" onclick="navTo('#fees')"><span class="s-dot"></span>Registration Fees</a>
     <a class="sidebar-link" onclick="navTo('#installation')"><span class="s-dot"></span>Setup &amp; Installation</a>
-    <a class="sidebar-link" onclick="navTo('#resources')"><span class="s-dot"></span>Resources</a>
     <a class="sidebar-link" onclick="navTo('#logistics')"><span class="s-dot"></span>Venue &amp; Logistics</a>
     <a class="sidebar-link" onclick="navTo('#contact')"><span class="s-dot"></span>Register &amp; Contact</a>
   </div>
@@ -351,18 +347,6 @@
       <div><div class="sidebar-ext-label">Registration</div>Google Form</div>
       <span>↗</span>
     </a>
-    <a class="sidebar-ext" href="https://ramanlab.github.io/workshop/" target="_blank">
-      <div><div class="sidebar-ext-label">Workshop Materials</div>Course Content</div>
-      <span>↗</span>
-    </a>
-    <a class="sidebar-ext" href="https://github.com/ramanlab/workshop" rel="noopener noreferrer" target="_blank">
-      <div><div class="sidebar-ext-label">Open Source</div>GitHub Repository</div>
-      <span>↗</span>
-    </a>
-    <a class="sidebar-ext" href="https://home.iitm.ac.in/kraman/lab/" target="_blank">
-      <div><div class="sidebar-ext-label">Research Group</div>Raman Lab</div>
-      <span>↗</span>
-    </a>
     <a class="sidebar-ext" href="https://wsai.iitm.ac.in/" target="_blank">
       <div><div class="sidebar-ext-label">Institution</div>WSAI, IIT Madras</div>
       <span>↗</span>
@@ -372,8 +356,9 @@
   <div class="sidebar-section">
     <div class="sidebar-section-label">Theme</div>
     <div style="display:flex;gap:0.6rem;padding:0 0.2rem;">
-      <div class="theme-dot t-light active" id="td-light" onclick="setTheme('light')" title="Sun">☀️</div>
-      <div class="theme-dot t-blue" id="td-blue" onclick="setTheme('blue')" title="Moon">🌙</div>
+      <div class="theme-dot t-light active" id="td-light" onclick="setTheme('light')" title="Light">☀️</div>
+      <div class="theme-dot t-dark" id="td-dark" onclick="setTheme('dark')" title="Dark">🌿</div>
+      <div class="theme-dot t-blue" id="td-blue" onclick="setTheme('blue')" title="Blue">🌙</div>
     </div>
   </div>
 </div>
@@ -381,13 +366,13 @@
 <!-- NAV -->
 <nav class="topbar">
   <a class="nav-brand" href="#hero">
-    <img src="ibse.png" alt="IBSE" style="height:28px;width:28px;object-fit:contain;border-radius:50%;flex-shrink:0;">
-    <img src="iitm.png" alt="IITM" style="height:28px;width:28px;object-fit:contain;flex-shrink:0;">
+    <img src="iitm.png" alt="IITM" style="height:26px;width:26px;object-fit:contain;border-radius:50%;flex-shrink:0;background:#fff;padding:1px;">
     <span class="nav-dot"></span>
     NPTEL+ · IIT MADRAS
   </a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
+    <li><a href="#collaborators">Collaborators</a></li>
     <li><a href="#schedule">Schedule</a></li>
     <li><a href="#instructors">Instructors</a></li>
     <li><a href="#fees">Fees</a></li>
@@ -396,13 +381,16 @@
   </ul>
   <div class="nav-right">
     <div class="theme-switcher">
-      <div class="theme-dot t-light active" onclick="setTheme('light')" title="Sun">☀️</div>
-      <div class="theme-dot t-blue" onclick="setTheme('blue')" title="Moon">🌙</div>
+      <div class="theme-dot t-light active" onclick="setTheme('light')" title="Light">☀️</div>
+      <div class="theme-dot t-dark" onclick="setTheme('dark')" title="Dark">🌿</div>
+      <div class="theme-dot t-blue" onclick="setTheme('blue')" title="Blue">🌙</div>
     </div>
     <a class="btn-reg-nav" href="https://docs.google.com/forms/d/e/1FAIpQLSdwgllMOG9YpY52nB1zRTNf6wnrrvxmAiMhm65kqEchR7R2Ig/viewform" target="_blank">Register →</a>
     <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
   </div>
 </nav>
+
+
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
@@ -412,7 +400,6 @@
   <a href="#instructors" onclick="closeMob()">Instructors</a>
   <a href="#fees" onclick="closeMob()">Fees</a>
   <a href="#installation" onclick="closeMob()">Installation</a>
-  <a href="#resources" onclick="closeMob()">Resources</a>
   <a href="#contact" onclick="closeMob()">Register</a>
 </div>
 
@@ -421,11 +408,10 @@
   <div class="wrapper">
     <div class="hero-eyebrow">National Workshop · IIT Madras · April 2026</div>
     <div class="badge-row">
-      <span class="badge b-nptel">NPTEL+</span>
       <span class="badge b-iitm">IIT Madras</span>
       <span class="badge b-wsai">In-Person</span>
     </div>
-    <h1 class="hero-title">Computational<br><em>Metagenomics:</em></h1>
+    <h1 class="hero-title">Computational<br><em>Metagenomics</em></h1>
     <p class="hero-subtitle">Methods &amp; Applications</p>
     <p class="hero-desc">A three-day immersive workshop at IIT Madras designed for researchers, faculty, and students ready to decode complex microbial communities using state-of-the-art computational pipelines — led by <strong>RamanLab</strong>.</p>
     <div class="cta-row">
@@ -451,15 +437,33 @@
       </div>
     </div>
     <!-- LOGOS -->
-    <div class="logo-row fade-up">
+    <div class="logo-row fade-up" style="flex-wrap:wrap;gap:1.8rem;margin-top:2.5rem;align-items:center;">
       <div class="logo-item">
-        <img src="ibse.png" alt="IBSE – Centre for Integrative Biology and Systems Medicine, IIT Madras">
-        <span>IBSE, IIT Madras</span>
+        <div style="width:52px;height:52px;border-radius:50%;overflow:hidden;border:2px solid rgba(185,28,28,0.3);background:#fff;display:flex;align-items:center;justify-content:center;">
+          <img src="iitm.png" alt="IIT Madras" style="height:46px;width:46px;object-fit:contain;">
+        </div>
+        <span>IIT Madras</span>
       </div>
       <div class="logo-sep"></div>
       <div class="logo-item">
-        <img src="iitm.png" alt="Indian Institute of Technology Madras">
-        <span>IIT Madras</span>
+        <div style="width:52px;height:52px;border-radius:50%;overflow:hidden;border:2px solid rgba(30,58,95,0.3);background:#fff;display:flex;align-items:center;justify-content:center;">
+          <img src="ibse.png" alt="IBSE" style="height:46px;width:46px;object-fit:contain;">
+        </div>
+        <span>IBSE</span>
+      </div>
+      <div class="logo-sep"></div>
+      <div class="logo-item">
+        <div style="height:52px;min-width:52px;padding:0 6px;border-radius:8px;overflow:hidden;border:2px solid rgba(194,120,3,0.25);background:#fff;display:flex;align-items:center;justify-content:center;">
+          <img src="data:image/png;base64,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" alt="NPTEL+" style="height:40px;width:auto;object-fit:contain;">
+        </div>
+        <span>NPTEL+</span>
+      </div>
+      <div class="logo-sep"></div>
+      <div class="logo-item">
+        <div style="height:52px;min-width:52px;padding:0 6px;border-radius:8px;overflow:hidden;border:2px solid rgba(26,86,219,0.2);background:#fff;display:flex;align-items:center;justify-content:center;">
+          <img src="data:image/png;base64,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" alt="WSAI IITM" style="height:44px;width:auto;object-fit:contain;">
+        </div>
+        <span>WSAI, IITM</span>
       </div>
     </div>
   </div>
@@ -467,12 +471,13 @@
 <div class="divider"></div>
 
 <!-- ABOUT -->
-<section id="about">
+<section id="about" style="padding: 80px 0;">
   <div class="wrapper">
-    <div class="about-grid">
+    <div class="about-grid" style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; align-items: start;">
+      
       <div class="about-text">
         <div class="sec-tag fade-up">About the Workshop</div>
-        <h2 class="sec-title fade-up">Three Days of<br><em>Deep Learning</em></h2>
+        <h2 class="sec-title fade-up">Three Days of<br><em>Metagenomics</em></h2>
         <p class="fade-up">This national workshop covers the entire computational metagenomics pipeline — from raw sequencing data to biological insights. You'll work hands-on with real datasets and the exact tools used in published research.</p>
         <p class="fade-up">Hosted by the Wadhwani School of Data Science &amp; AI (WSAI) and delivered through NPTEL+, this is one of India's few intensive, in-person workshops on metagenomic data analysis.</p>
         <ul class="features fade-up">
@@ -483,7 +488,8 @@
           <li>Certificate of participation provided</li>
         </ul>
       </div>
-      <div class="info-stack fade-up">
+
+      <div class="info-stack fade-up" style="display: flex; flex-direction: column; gap: 1rem;">
         <div class="info-card">
           <div class="info-icon">📅</div>
           <div><div class="info-label">Dates</div><div class="info-val">7th – 9th April, 2026</div></div>
@@ -497,14 +503,83 @@
           <div><div class="info-label">Timings</div><div class="info-val">09:00 AM – 06:00 PM IST</div></div>
         </div>
         <div class="info-card">
-          <div class="info-icon">🏛️</div>
-          <div><div class="info-label">Organised By</div><div class="info-val">WSAI × NPTEL+, IIT Madras</div></div>
+          <div class="info-icon">🎓</div>
+          <div><div class="info-label">Format</div><div class="info-val">IIT Madras · In-Person</div></div>
         </div>
         <div class="info-card">
-          <div class="info-icon">✉️</div>
-          <div><div class="info-label">Queries</div><div class="info-val"><a href="/cdn-cgi/l/email-protection#8fe1fffbeae3ffe3fafca2f8e0fde4fce7e0ffcfe1fffbeae3a1e6e6fbe2a1eeeca1e6e1" style="color:var(--accent4);"><span class="__cf_email__" data-cfemail="137d6367767f637f66603e647c6178607b7c63537d6367767f3d7a7a677e3d72703d7a7d">[email&#160;protected]</span></a></div></div>
-        </div>
+  <div class="info-icon">✉️</div>
+  <div style="min-width: 0; overflow: hidden;">
+    <div class="info-label">Queries</div>
+    <div class="info-val">
+      <a href="mailto:nptelplus-workshop@nptel.iitm.ac.in" style="color:var(--accent4); text-decoration: none; word-break: break-all; font-size: 0.85rem; display: block;">
+        nptelplus-workshop@nptel.iitm.ac.in
+      </a>
+    </div>
+  </div>
+</div>
+      </div> </div>
+  </div>
+</section>
+<!-- WELCOME HOSPITALITY BANNER -->
+<section id="welcome" style="padding:2rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:linear-gradient(130deg,rgba(26,86,219,0.03) 0%,rgba(14,159,110,0.04) 100%);">
+  <div class="wrapper">
+    <div style="text-align:center;padding:1rem 0;">
+      <div style="font-family:var(--mono);font-size:0.56rem;letter-spacing:0.24em;text-transform:uppercase;color:var(--accent);margin-bottom:0.9rem;">🙏 A Warm Welcome Awaits You</div>
+      <p style="font-family:'Instrument Serif',serif;font-size:clamp(1.2rem,2.2vw,1.75rem);color:var(--text);max-width:680px;margin:0 auto 0.8rem;line-height:1.6;">We are delighted to welcome you to <em style="font-style:italic;color:var(--accent);">IIT Madras</em> — one of India's finest research campuses, nestled inside a protected urban forest.</p>
+      <p style="font-size:0.87rem;color:var(--muted);max-width:560px;margin:0 auto 1.3rem;line-height:1.9;">Whether you're joining us from across India or just across the city — expect brilliant science, wonderful peers, and a truly one-of-a-kind campus experience. Our team is here to make every moment count.</p>
+      <div style="display:flex;gap:0.7rem;justify-content:center;flex-wrap:wrap;">
+        <span style="font-family:var(--mono);font-size:0.57rem;letter-spacing:0.09em;color:var(--muted);border:1px solid var(--border);padding:0.32rem 0.85rem;border-radius:20px;background:var(--card);">🌿 Protected Forest Campus</span>
+        <span style="font-family:var(--mono);font-size:0.57rem;letter-spacing:0.09em;color:var(--muted);border:1px solid var(--border);padding:0.32rem 0.85rem;border-radius:20px;background:var(--card);">🦌 Blackbuck &amp; Deer</span>
+        <span style="font-family:var(--mono);font-size:0.57rem;letter-spacing:0.09em;color:var(--muted);border:1px solid var(--border);padding:0.32rem 0.85rem;border-radius:20px;background:var(--card);">🍽️ Campus Dining</span>
+        <span style="font-family:var(--mono);font-size:0.57rem;letter-spacing:0.09em;color:var(--muted);border:1px solid var(--border);padding:0.32rem 0.85rem;border-radius:20px;background:var(--card);">🚌 Free Shuttle</span>
+        <span style="font-family:var(--mono);font-size:0.57rem;letter-spacing:0.09em;color:var(--muted);border:1px solid var(--border);padding:0.32rem 0.85rem;border-radius:20px;background:var(--card);">🏥 On-Campus Hospital</span>
       </div>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- COLLABORATORS -->
+<style>
+  .collab-card{display:flex;align-items:flex-start;gap:1.2rem;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1.4rem;transition:all 0.22s;text-decoration:none;color:inherit;position:relative;overflow:hidden;}
+  .collab-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent4));transform:scaleX(0);transition:transform 0.3s;transform-origin:left;}
+  .collab-card:hover{border-color:var(--border2);transform:translateY(-2px);box-shadow:0 10px 30px rgba(0,0,0,0.06);}
+  .collab-card:hover::after{transform:scaleX(1);}
+  .collab-logo-box{flex-shrink:0;width:62px;height:62px;background:#fff;border-radius:var(--r);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;padding:6px;overflow:hidden;}
+  .collab-logo-box img{max-width:100%;max-height:100%;object-fit:contain;}
+  .collab-tag{font-family:var(--mono);font-size:0.5rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent4);margin-bottom:0.22rem;}
+  .collab-name{font-family:'Instrument Serif',serif;font-size:1.08rem;color:var(--text);margin-bottom:0.28rem;line-height:1.2;}
+  .collab-desc{font-size:0.77rem;color:var(--muted);line-height:1.6;margin-bottom:0.45rem;}
+  .collab-url{font-family:var(--mono);font-size:0.54rem;letter-spacing:0.08em;color:var(--accent);}
+  @media(max-width:768px){.collab-grid{grid-template-columns:1fr!important;}}
+</style>
+<section id="collaborators" style="padding:3rem 0;">
+  <div class="wrapper">
+    <div class="sec-tag fade-up">Our Collaborators</div>
+    <h2 class="sec-title fade-up">Brought to You By<br><em>Four Pillars</em></h2>
+    <p class="sec-lead fade-up">This workshop is a joint effort across four institutions and programmes at IIT Madras — each bringing unique expertise, resources, and reach.</p>
+    <div class="collab-grid fade-up" style="display:grid;grid-template-columns:repeat(2,1fr);gap:1.1rem;">
+
+      <a href="https://ramanlab.github.io/" target="_blank" class="collab-card">
+        <div class="collab-logo-box"><img src="iitm.png" alt="Raman Lab"></div>
+        <div><div class="collab-tag">Research Group</div><div class="collab-name">Raman Lab</div><div class="collab-desc">Prof. Karthik Raman's computational biology group at IIT Madras — leading the scientific programme of this workshop.</div><div class="collab-url">ramanlab.github.io ↗</div></div>
+      </a>
+
+      <a href="https://wsai.iitm.ac.in/" target="_blank" class="collab-card">
+        <div class="collab-logo-box"><img src="data:image/png;base64,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" alt="WSAI"></div>
+        <div><div class="collab-tag">Host School</div><div class="collab-name">WSAI, IIT Madras</div><div class="collab-desc">Wadhwani School of Data Science &amp; AI — providing institutional infrastructure and academic support for this workshop.</div><div class="collab-url">wsai.iitm.ac.in ↗</div></div>
+      </a>
+
+      <a href="https://ibse.iitm.ac.in/" target="_blank" class="collab-card">
+        <div class="collab-logo-box"><img src="ibse.png" alt="IBSE"></div>
+        <div><div class="collab-tag">Research Centre</div><div class="collab-name">IBSE, IIT Madras</div><div class="collab-desc">Centre for Integrative Biology and Systems Medicine — IIT Madras's hub for computational and systems biology research.</div><div class="collab-url">ibse.iitm.ac.in ↗</div></div>
+      </a>
+
+      <a href="https://elearn.nptel.ac.in/?v=13b5bfe96f3e" target="_blank" class="collab-card">
+        <div class="collab-logo-box"><img src="data:image/png;base64,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" alt="NPTEL+"></div>
+        <div><div class="collab-tag">Platform Partner</div><div class="collab-name">NPTEL+</div><div class="collab-desc">India's premier online learning platform — providing official registration, certification, and national outreach for the workshop.</div><div class="collab-url">elearn.nptel.ac.in ↗</div></div>
+      </a>
+
     </div>
   </div>
 </section>
@@ -659,21 +734,27 @@
       </div>
     </div>
 
-    <div class="instr-row">
-      <div class="instr-card fade-up">
-        <div class="instr-role">Instructor</div>
-        <div class="instr-name">Dr. Aarti Ravindran</div>
-        <div class="instr-dept">Postdoctoral Researcher · Dept. of Data Science &amp; AI, IIT Madras</div>
-      </div>
-      <div class="instr-card fade-up">
-        <div class="instr-role">Instructor</div>
-        <div class="instr-name">Dr. Pratyay Sengupta</div>
-        <div class="instr-dept">Postdoctoral Researcher · Dept. of Data Science &amp; AI, IIT Madras</div>
-      </div>
-    </div>
+  <div class="instr-row">
+  <div class="instr-card fade-up">
+    <div class="instr-role">Instructor</div>
+    <div class="instr-name">Dr. Aarthi Ramachandran</div>
+    <div class="instr-dept">Postdoctoral Researcher · Dept. of Data Science &amp; AI, IIT Madras</div>
+    <a href="https://in.linkedin.com/in/aarthi-ramachandran-22082013" target="_blank" style="text-decoration:none; margin-top:10px; display:inline-block; color:var(--accent); font-size:0.8rem;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle; margin-right:4px;"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+      LinkedIn Profile
+    </a>
   </div>
-</section>
-<div class="divider"></div>
+
+  <div class="instr-card fade-up">
+    <div class="instr-role">Instructor</div>
+    <div class="instr-name">Dr. Pratyay Sengupta</div>
+    <div class="instr-dept">Postdoctoral Researcher · Dept. of Data Science &amp; AI, IIT Madras</div>
+    <a href="https://in.linkedin.com/in/pratyaysengupta" target="_blank" style="text-decoration:none; margin-top:10px; display:inline-block; color:var(--accent); font-size:0.8rem;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle; margin-right:4px;"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+      LinkedIn Profile
+    </a>
+  </div>
+</div>
 
 <!-- AUDIENCE -->
 <section id="audience">
@@ -741,7 +822,7 @@
     <h2 class="sec-title fade-up">Get Your System<br><em>Workshop-Ready</em></h2>
     <p class="sec-lead fade-up">Step-by-step instructions to install all required tools before the workshop. Follow these guides to set up WSL, Conda, QIIME 2, and other essential software.</p>
     <div class="fade-up">
-      <a href="https://github.com/Harippriyasiva/metagenomic-workshop-2026/raw/main/Workshop_Installation.pdf" target="_blank" class="btn-primary" style="display:inline-flex;align-items:center;gap:0.6rem;background:var(--accent);color:#000;padding:0.8rem 1.8rem;border-radius:var(--r);font-family:var(--mono);font-size:0.72rem;font-weight:500;letter-spacing:0.08em;text-decoration:none;transition:all 0.2s;box-shadow:0 0 24px rgba(52,211,153,0.2);">
+      <a href="https://github.com/RamanLab/metagenomic-workshop-2026/blob/main/Workshop_Installation.pdf" target="_blank" class="btn-primary" style="display:inline-flex;align-items:center;gap:0.6rem;background:var(--accent);color:#000;padding:0.8rem 1.8rem;border-radius:var(--r);font-family:var(--mono);font-size:0.72rem;font-weight:500;letter-spacing:0.08em;text-decoration:none;transition:all 0.2s;box-shadow:0 0 24px rgba(52,211,153,0.2);">
         <span>📥</span>
         Download Complete Installation Guide
       </a>
@@ -750,327 +831,257 @@
 </section>
 <div class="divider"></div>
 
-<!-- RESOURCES -->
-<section id="resources">
-  <div class="wrapper">
-    <div class="sec-tag fade-up">Tools &amp; Resources</div>
-    <h2 class="sec-title fade-up">Everything You<br><em>Need to Explore</em></h2>
-    <p class="sec-lead fade-up">Workshop materials, official pages, and open-source tools — all in one place.</p>
-    <div class="resources-grid">
-      <a class="res-card fade-up" href="https://elearn.nptel.ac.in/shop/iit-workshops/ongoing/others/national-workshop-on-computational-metagenomics-methods-and-applications/?v=13b5bfe96f3e" target="_blank">
-        <span class="res-icon">📋</span>
-        <div>
-          <div class="res-type">Official Page · Registration</div>
-          <div class="res-title">NPTEL+ Workshop Page</div>
-          <div class="res-desc">Full details, programme overview, and official registration portal on NPTEL+.</div>
-        </div>
-        <span class="res-arrow">↗</span>
-      </a>
-      <a class="res-card fade-up" href="https://ramanlab.github.io/workshop/" target="_blank">
-        <span class="res-icon">📚</span>
-        <div>
-          <div class="res-type">Workshop Materials · Online</div>
-          <div class="res-title">Complete Course Content</div>
-          <div class="res-desc">All workshop materials — slides, notebooks, datasets, and tutorials from the Raman Lab.</div>
-        </div>
-        <span class="res-arrow">↗</span>
-      </a>
-      <a class="res-card fade-up" href="https://github.com/ramanlab/workshop" rel="noopener noreferrer" target="_blank">
-        <span class="res-icon">⚗️</span>
-        <div>
-          <div class="res-type">Open Source · GitHub</div>
-          <div class="res-title">Workshop Source Code</div>
-          <div class="res-desc">Browse complete pipelines and tools — github.com/ramanlab/workshop</div>
-        </div>
-        <span class="res-arrow">↗</span>
-      </a>
-      <a class="res-card fade-up" href="https://wsai.iitm.ac.in/" target="_blank">
-        <span class="res-icon">🌐</span>
-        <div>
-          <div class="res-type">Institution</div>
-          <div class="res-title">Wadhwani School of DS &amp; AI</div>
-          <div class="res-desc">WSAI at IIT Madras — the organising school for this national workshop.</div>
-        </div>
-        <span class="res-arrow">↗</span>
-      </a>
-    </div>
-  </div>
-</section>
-<div class="divider"></div>
-
 <!-- VENUE & LOGISTICS -->
 <style>
-  .logistics-layout{display:grid;grid-template-columns:220px 1fr;gap:1.5rem;margin-top:2rem;align-items:start;}
-  .logistics-panel{background:var(--card);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;position:sticky;top:72px;}
-  .logistics-panel-header{padding:0.8rem 1.2rem;border-bottom:1px solid var(--border);background:var(--accent-dim);}
-  .logistics-panel-title{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);}
-  .logistics-nav-item{display:flex;align-items:center;gap:0.6rem;padding:0.6rem 1rem;font-size:0.8rem;color:var(--muted);cursor:pointer;border-left:2px solid transparent;transition:all 0.18s;border-bottom:1px solid var(--border);}
-  .logistics-nav-item:last-child{border-bottom:none;}
-  .logistics-nav-item:hover,.logistics-nav-item.active{color:var(--accent);border-left-color:var(--accent);background:var(--accent-dim);}
-  .logistics-nav-item .l-icon{font-size:0.85rem;width:16px;text-align:center;flex-shrink:0;}
-  .logistics-main{display:flex;flex-direction:column;gap:1rem;}
-  .l-block{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1.3rem 1.5rem;scroll-margin-top:80px;}
-  .l-block-header{display:flex;align-items:center;gap:0.5rem;margin-bottom:1rem;padding-bottom:0.7rem;border-bottom:1px solid var(--border);}
-  .l-block-icon{font-size:1rem;}
-  .l-block-label{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);}
-  .l-row{display:flex;flex-direction:column;gap:0.15rem;margin-bottom:0.8rem;}
-  .l-row:last-child{margin-bottom:0;}
-  .l-key{font-family:var(--mono);font-size:0.55rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);}
-  .l-val{font-size:0.86rem;color:var(--text);line-height:1.55;}
-  .l-val strong{color:var(--accent);}
-  .l-maps-btn{display:inline-flex;align-items:center;gap:0.4rem;margin-top:0.8rem;font-family:var(--mono);font-size:0.58rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);background:var(--accent-dim);border:1px solid var(--border);border-radius:4px;padding:0.38rem 0.8rem;transition:all 0.2s;text-decoration:none;}
-  .l-maps-btn:hover{border-color:var(--accent);}
-  .l-food-item{display:flex;gap:0.7rem;align-items:flex-start;padding:0.6rem 0;border-bottom:1px solid var(--border);}
-  .l-food-item:last-child{border-bottom:none;padding-bottom:0;}
-  .l-food-dot{width:5px;height:5px;border-radius:50%;background:var(--accent);margin-top:0.4rem;flex-shrink:0;}
-  .l-food-name{font-size:0.85rem;color:var(--text);font-weight:500;margin-bottom:0.05rem;}
-  .l-food-loc{font-size:0.75rem;color:var(--muted);}
-  .l-req-item{display:flex;gap:0.8rem;align-items:flex-start;padding:0.75rem 0;border-bottom:1px solid var(--border);}
-  .l-req-item:last-child{border-bottom:none;padding-bottom:0;}
-  .l-req-check{width:18px;height:18px;border-radius:4px;background:rgba(251,191,36,0.12);border:1px solid rgba(251,191,36,0.3);display:flex;align-items:center;justify-content:center;font-size:0.65rem;color:var(--accent3);flex-shrink:0;margin-top:0.1rem;}
-  .l-req-title{font-size:0.85rem;color:var(--text);font-weight:500;margin-bottom:0.15rem;}
-  .l-req-desc{font-size:0.76rem;color:var(--muted);line-height:1.5;}
-  .l-github-btn{display:inline-flex;align-items:center;gap:0.5rem;font-family:var(--mono);font-size:0.62rem;letter-spacing:0.08em;color:var(--accent);background:var(--accent-dim);border:1px solid var(--border);border-radius:4px;padding:0.45rem 0.9rem;margin-top:0.8rem;transition:all 0.2s;text-decoration:none;}
-  .l-github-btn:hover{border-color:var(--accent);}
-  .l-campus-note{font-size:0.85rem;color:var(--muted);line-height:1.75;}
-  .l-campus-note strong{color:var(--text);}
-  /* Bus tracker embed */
-  .bus-tracker-wrap{border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin-top:0.8rem;background:var(--surface);}
-  .bus-tracker-wrap iframe{width:100%;height:320px;border:none;display:block;}
-  .bus-info-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;margin-top:0.8rem;}
-  .bus-info-card{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:0.7rem 0.9rem;}
-  .bus-info-label{font-family:var(--mono);font-size:0.52rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:0.2rem;}
-  .bus-info-val{font-size:0.82rem;color:var(--text);font-weight:500;}
-  /* Hospital card */
-  .hospital-card{background:rgba(239,68,68,0.05);border:1px solid rgba(239,68,68,0.18);border-radius:var(--r);padding:1rem 1.2rem;margin-top:0.8rem;}
-  .hospital-header{display:flex;align-items:center;gap:0.5rem;margin-bottom:0.6rem;}
-  .hospital-name{font-size:0.88rem;color:var(--text);font-weight:600;}
-  .hospital-tag{font-family:var(--mono);font-size:0.5rem;letter-spacing:0.12em;text-transform:uppercase;background:rgba(239,68,68,0.1);color:#ef4444;border:1px solid rgba(239,68,68,0.2);border-radius:2px;padding:0.15rem 0.5rem;}
-  .hospital-detail{font-size:0.78rem;color:var(--muted);line-height:1.6;}
-  .hospital-detail strong{color:var(--text);}
-  /* IBSE card */
-  .ibse-card{display:flex;align-items:flex-start;gap:1rem;background:var(--accent-dim);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.2rem;margin-top:0.8rem;text-decoration:none;transition:border-color 0.2s;}
-  .ibse-card:hover{border-color:var(--accent);}
-  .ibse-logo{width:44px;height:44px;border-radius:50%;object-fit:contain;flex-shrink:0;}
-  .ibse-info-title{font-size:0.88rem;color:var(--text);font-weight:600;margin-bottom:0.2rem;}
-  .ibse-info-sub{font-size:0.75rem;color:var(--muted);line-height:1.5;}
-  @media(max-width:700px){
-    .logistics-layout{grid-template-columns:1fr;}
-    .logistics-panel{position:static;display:flex;flex-wrap:wrap;gap:0;}
-    .logistics-panel-header{width:100%;}
-    .logistics-nav-item{flex:1 1 auto;border-left:none;border-bottom:2px solid transparent;border-right:1px solid var(--border);justify-content:center;}
-    .logistics-nav-item.active,.logistics-nav-item:hover{border-bottom-color:var(--accent);border-left-color:transparent;}
-    .bus-info-grid{grid-template-columns:1fr;}
+  /* ── Logistics Tab System ── */
+  .logi-wrap{margin-top:2rem;display:grid;grid-template-columns:220px 1fr;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--card);}
+  .logi-sidebar{background:var(--surface);border-right:1px solid var(--border);display:flex;flex-direction:column;}
+  .logi-sidebar-head{padding:0.9rem 1.2rem;border-bottom:1px solid var(--border);background:var(--accent-dim);}
+  .logi-sidebar-title{font-family:var(--mono);font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);}
+  .logi-tab{display:flex;align-items:center;gap:0.65rem;padding:0.75rem 1.1rem;font-size:0.83rem;color:var(--muted);cursor:pointer;border-left:3px solid transparent;transition:all 0.18s;border-bottom:1px solid var(--border);user-select:none;position:relative;}
+  .logi-tab:last-child{border-bottom:none;}
+  .logi-tab .lt-icon{font-size:1rem;width:20px;text-align:center;flex-shrink:0;transition:transform 0.2s;}
+  .logi-tab:hover{color:var(--text);background:rgba(255,255,255,0.03);}
+  .logi-tab.active{color:var(--accent);border-left-color:var(--accent);background:var(--accent-dim);font-weight:500;}
+  .logi-tab.active .lt-icon{transform:scale(1.15);}
+  /* right pane */
+  .logi-content{position:relative;min-height:340px;}
+  .logi-panel{display:none;padding:1.8rem 2rem;animation:lpFadeIn 0.25s ease;}
+  .logi-panel.active{display:block;}
+  @keyframes lpFadeIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:none;}}
+  /* panel header */
+  .lp-head{display:flex;align-items:center;gap:0.7rem;margin-bottom:1.4rem;padding-bottom:0.9rem;border-bottom:1px solid var(--border);}
+  .lp-icon{font-size:1.3rem;}
+  .lp-title{font-family:var(--mono);font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);}
+  /* location rows */
+  .lp-row{display:grid;grid-template-columns:100px 1fr;gap:0.5rem 1rem;align-items:start;padding:0.6rem 0;border-bottom:1px solid var(--border);}
+  .lp-row:last-of-type{border-bottom:none;}
+  .lp-key{font-family:var(--mono);font-size:0.55rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);padding-top:0.15rem;}
+  .lp-val{font-size:0.86rem;color:var(--text);line-height:1.55;}
+  .lp-val strong{color:var(--accent2);}
+  /* maps button */
+  .lp-maps{display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;font-family:var(--mono);font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);background:var(--accent-dim);border:1px solid var(--border);border-radius:5px;padding:0.4rem 0.9rem;transition:all 0.2s;text-decoration:none;}
+  .lp-maps:hover{border-color:var(--accent);background:rgba(52,211,153,0.15);}
+  /* reach items */
+  .lp-reach-item{display:flex;gap:0.9rem;align-items:flex-start;padding:0.75rem 0;border-bottom:1px solid var(--border);}
+  .lp-reach-item:last-child{border-bottom:none;}
+  .lp-reach-emoji{font-size:1.15rem;width:26px;flex-shrink:0;text-align:center;margin-top:0.1rem;}
+  .lp-reach-title{font-size:0.86rem;color:var(--text);font-weight:600;margin-bottom:0.2rem;}
+  .lp-reach-desc{font-size:0.78rem;color:var(--muted);line-height:1.55;}
+  /* campus bus */
+  .lp-vehicle-box{background:rgba(251,191,36,0.06);border:1px solid rgba(251,191,36,0.22);border-radius:8px;padding:1.1rem 1.3rem;margin-bottom:1rem;}
+  .lp-vehicle-title{font-family:var(--mono);font-size:0.57rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent3);font-weight:600;display:flex;align-items:center;gap:0.5rem;margin-bottom:0.6rem;}
+  .lp-speed-badge{display:flex;align-items:center;gap:0.55rem;background:rgba(251,191,36,0.13);border:1px solid rgba(251,191,36,0.35);border-radius:6px;padding:0.5rem 0.85rem;margin:0.6rem 0;}
+  .lp-speed-badge span{font-size:0.82rem;color:var(--accent3);font-weight:500;}
+  .lp-mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-top:0.55rem;}
+  .lp-mini-card{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:0.55rem 0.8rem;}
+  .lp-mini-label{font-family:var(--mono);font-size:0.48rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:0.18rem;}
+  .lp-mini-val{font-size:0.82rem;color:var(--text);font-weight:500;}
+  .lp-bus-box{background:var(--accent-dim);border:1px solid var(--border);border-radius:8px;padding:1.1rem 1.3rem;}
+  .lp-bus-title{font-family:var(--mono);font-size:0.57rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);font-weight:600;display:flex;align-items:center;gap:0.5rem;margin-bottom:0.6rem;}
+  .lp-btn-row{display:flex;flex-direction:column;gap:8px;margin-top:0.9rem;}
+  .lp-btn-solid{display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-size:0.78rem;font-weight:600;padding:10px 14px;background:var(--accent);color:#fff;border-radius:6px;transition:opacity 0.2s;}
+  .lp-btn-solid:hover{opacity:0.88;}
+  .lp-btn-outline{display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-size:0.78rem;padding:10px 14px;border:1px solid var(--border);color:var(--text);border-radius:6px;background:var(--surface);transition:border-color 0.2s;}
+  .lp-btn-outline:hover{border-color:var(--accent);}
+  /* dining */
+  .lp-food-grid{display:flex;flex-direction:column;gap:0;}
+  .lp-food-item{display:flex;align-items:flex-start;gap:0.9rem;padding:0.85rem 0;border-bottom:1px solid var(--border);}
+  .lp-food-item:last-child{border-bottom:none;}
+  .lp-food-num{width:22px;height:22px;border-radius:50%;background:var(--accent-dim);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:0.55rem;color:var(--accent);flex-shrink:0;margin-top:0.1rem;font-weight:600;}
+  .lp-food-name{font-size:0.86rem;color:var(--text);font-weight:600;margin-bottom:0.15rem;}
+  .lp-food-loc{font-size:0.76rem;color:var(--muted);line-height:1.4;}
+  .lp-food-warning{font-size:0.73rem;color:var(--accent3);margin-top:0.2rem;}
+  .lp-app-btn{display:inline-flex;align-items:center;gap:6px;margin-top:0.45rem;background:#01875f;color:#fff;font-family:var(--mono);font-size:0.57rem;letter-spacing:0.07em;text-transform:uppercase;padding:0.32rem 0.7rem;border-radius:4px;text-decoration:none;font-weight:600;transition:opacity 0.2s;}
+  .lp-app-btn:hover{opacity:0.85;}
+  .lp-hostel-note{display:flex;gap:0.6rem;align-items:flex-start;background:var(--accent-dim);border:1px solid var(--border);border-radius:6px;padding:0.7rem 0.9rem;margin-top:1rem;font-size:0.78rem;color:var(--muted);line-height:1.55;}
+  /* hospital */
+  .lp-hospital-card{background:rgba(239,68,68,0.05);border:1px solid rgba(239,68,68,0.2);border-radius:10px;padding:1.2rem 1.4rem;margin-top:0.6rem;}
+  .lp-hosp-head{display:flex;align-items:center;gap:0.7rem;margin-bottom:0.8rem;}
+  .lp-hosp-name{font-size:0.92rem;color:var(--text);font-weight:700;}
+  .lp-hosp-badge{font-family:var(--mono);font-size:0.48rem;letter-spacing:0.12em;text-transform:uppercase;background:rgba(239,68,68,0.12);color:#ef4444;border:1px solid rgba(239,68,68,0.22);border-radius:2px;padding:0.15rem 0.5rem;display:inline-block;margin-top:0.18rem;}
+  .lp-hosp-rows{display:flex;flex-direction:column;gap:0.35rem;}
+  .lp-hosp-row{display:flex;gap:0.5rem;font-size:0.8rem;color:var(--muted);line-height:1.5;}
+  .lp-hosp-row strong{color:var(--text);min-width:80px;display:inline-block;}
+  /* requirements */
+  .lp-req-list{display:flex;flex-direction:column;gap:0.55rem;margin-top:0.2rem;}
+  .lp-req-item{display:flex;align-items:flex-start;gap:0.85rem;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:0.85rem 1rem;transition:border-color 0.2s;}
+  .lp-req-item:hover{border-color:var(--accent);}
+  .lp-req-check{width:22px;height:22px;border-radius:5px;background:rgba(251,191,36,0.1);border:1px solid rgba(251,191,36,0.3);display:flex;align-items:center;justify-content:center;font-size:0.7rem;color:var(--accent3);flex-shrink:0;margin-top:0.1rem;font-weight:700;}
+  .lp-req-title{font-size:0.86rem;color:var(--text);font-weight:600;margin-bottom:0.15rem;}
+  .lp-req-desc{font-size:0.76rem;color:var(--muted);line-height:1.5;}
+  /* campus life */
+  .lp-campus-note{font-size:0.87rem;color:var(--muted);line-height:1.8;margin-bottom:1rem;}
+  .lp-campus-note strong{color:var(--text);}
+  .lp-nature-card{display:flex;align-items:flex-start;gap:0.75rem;background:rgba(52,211,153,0.05);border:1px solid rgba(52,211,153,0.2);border-radius:8px;padding:0.85rem 1rem;}
+  .lp-nature-label{font-family:var(--mono);font-size:0.54rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:0.25rem;}
+  .lp-nature-desc{font-size:0.82rem;color:var(--text);line-height:1.65;}
+  /* mobile responsive */
+  @media(max-width:720px){
+    .logi-wrap{grid-template-columns:1fr;border-radius:10px;}
+    .logi-sidebar{border-right:none;border-bottom:1px solid var(--border);flex-direction:row;flex-wrap:wrap;overflow-x:auto;}
+    .logi-sidebar-head{display:none;}
+    .logi-tab{border-left:none;border-bottom:2px solid transparent;border-right:1px solid var(--border);flex:1 1 auto;justify-content:center;font-size:0.75rem;padding:0.65rem 0.5rem;}
+    .logi-tab.active{border-bottom-color:var(--accent);border-left-color:transparent;}
+    .logi-panel{padding:1.2rem 1.2rem;}
+    .lp-mini-grid{grid-template-columns:1fr;}
   }
 </style>
-
 <section id="logistics">
   <div class="wrapper">
     <div class="sec-tag fade-up">On-Site Guide</div>
     <h2 class="sec-title fade-up">Venue &amp; <em>Logistics</em></h2>
     <p class="sec-lead fade-up">Everything you need to know before you arrive — location, transport, dining, and campus life.</p>
 
-    <div class="logistics-layout fade-up">
+    <div class="logi-wrap fade-up">
 
-      <!-- LEFT PANEL -->
-      <div class="logistics-panel">
-        <div class="logistics-panel-header">
-          <div class="logistics-panel-title">Quick Navigation</div>
-        </div>
-        <div class="logistics-nav-item active" onclick="lNav('l-location',this)">
-          <span class="l-icon">📍</span> Location
-        </div>
-        <div class="logistics-nav-item" onclick="lNav('l-bus',this)">
-          <span class="l-icon">🚌</span> Campus Bus
-        </div>
-        <div class="logistics-nav-item" onclick="lNav('l-dining',this)">
-          <span class="l-icon">🍴</span> Dining
-        </div>
-        <div class="logistics-nav-item" onclick="lNav('l-hospital',this)">
-          <span class="l-icon">🏥</span> Hospital
-        </div>
-        <div class="logistics-nav-item" onclick="lNav('l-ibse',this)">
-          <span class="l-icon">🔬</span> IBSE
-        </div>
-        <div class="logistics-nav-item" onclick="lNav('l-requirements',this)">
-          <span class="l-icon">⚠️</span> Requirements
-        </div>
-        <div class="logistics-nav-item" onclick="lNav('l-campus',this)">
-          <span class="l-icon">🦌</span> Campus Life
-        </div>
+      <!-- SIDEBAR TABS -->
+      <div class="logi-sidebar">
+        <div class="logi-sidebar-head"><div class="logi-sidebar-title">Quick Guide</div></div>
+        <div class="logi-tab active" onclick="logiTab('lt-location',this)"><span class="lt-icon">📍</span> Location</div>
+        <div class="logi-tab" onclick="logiTab('lt-reach',this)"><span class="lt-icon">🗺️</span> How to Reach</div>
+        <div class="logi-tab" onclick="logiTab('lt-bus',this)"><span class="lt-icon">🚌</span> Campus Bus</div>
+        <div class="logi-tab" onclick="logiTab('lt-dining',this)"><span class="lt-icon">🍴</span> Dining</div>
+        <div class="logi-tab" onclick="logiTab('lt-hospital',this)"><span class="lt-icon">🏥</span> Hospital</div>
+        <div class="logi-tab" onclick="logiTab('lt-requirements',this)"><span class="lt-icon">⚠️</span> Requirements</div>
+        <div class="logi-tab" onclick="logiTab('lt-campus',this)"><span class="lt-icon">🦌</span> Campus Life</div>
       </div>
 
-      <!-- RIGHT MAIN -->
-      <div class="logistics-main">
+      <!-- CONTENT PANELS -->
+      <div class="logi-content">
 
         <!-- Location -->
-        <div class="l-block" id="l-location">
-          <div class="l-block-header">
-            <span class="l-block-icon">📍</span>
-            <span class="l-block-label">Venue Location</span>
-          </div>
-          <div class="l-row">
-            <span class="l-key">Venue</span>
-            <span class="l-val"><strong>NAC 2</strong> — New Academic Complex, Block 2<br>IIT Madras, Chennai 600036</span>
-          </div>
-          <div class="l-row">
-            <span class="l-key">Room</span>
-            <span class="l-val"><strong>DA632</strong> — 6th Floor</span>
-          </div>
-          <div class="l-row">
-            <span class="l-key">Nearest Gate</span>
-            <span class="l-val">Main Gate (Sardar Patel Rd) · ~10 min walk</span>
-          </div>
-          <a class="l-maps-btn" href="https://maps.google.com/?q=NAC+2+IIT+Madras+Chennai" target="_blank">↗ View on Google Maps</a>
+        <div class="logi-panel active" id="lt-location">
+          <div class="lp-head"><span class="lp-icon">📍</span><span class="lp-title">Venue Location</span></div>
+          <div class="lp-row"><span class="lp-key">Venue</span><span class="lp-val"><strong>NAC 2</strong> — New Academic Complex, Block 2<br>IIT Madras, Chennai 600036</span></div>
+          <div class="lp-row"><span class="lp-key">Room</span><span class="lp-val"><strong>DA632</strong> — 6th Floor</span></div>
+          <div class="lp-row"><span class="lp-key">Nearest Gate</span><span class="lp-val">Main Gate (Sardar Patel Rd) · ~10 min walk</span></div>
+          <a class="lp-maps" href="https://maps.google.com/?q=NAC+2+IIT+Madras+Chennai" target="_blank">↗ View on Google Maps</a>
+        </div>
+
+        <!-- How to Reach -->
+        <div class="logi-panel" id="lt-reach">
+        <div class="lp-head"><span class="lp-icon">🗺️</span><span class="lp-title">How to Reach IIT Madras</span></div>
+        <div class="lp-reach-item"><span class="lp-reach-emoji">✈️</span><div><div class="lp-reach-title">By Air</div><div class="lp-reach-desc">Chennai International Airport — ~14 km away. Take a cab/auto to IIT Madras Main Gate on Sardar Patel Road.</div></div></div>
+        <div class="lp-reach-item"><span class="lp-reach-emoji">🚆</span><div><div class="lp-reach-title">By Train</div><div class="lp-reach-desc">Nearest stations: Chennai Central or Chennai Egmore. Take the MRTS to Kasturba Nagar/Taramani or Metro to Guindy, then an auto/cab to the campus.</div></div></div>
+        <div class="lp-reach-item"><span class="lp-reach-emoji">🚌</span><div><div class="lp-reach-title">By Bus</div><div class="lp-reach-desc">MTC buses (Routes 21G, 5C, 47G, 19B, 47) stop at IIT Madras Main Gate. Routes from Adyar, Guindy, and Taramani are convenient.</div></div></div>
+        <div class="lp-reach-item"><span class="lp-reach-emoji">🚗</span><div><div class="lp-reach-title">By Cab / Auto</div><div class="lp-reach-desc">Uber and Ola are widely available. Enter via Main Gate (Sardar Patel Road) — mention the Computational Metagenomics Workshop at NAC 2. Plan your travel accordingly to reach the campus at your convenience.</div></div></div>
+        <a class="lp-maps" href="https://www.google.com/maps/dir//IIT+Madras+Main+Gate" target="_blank">↗ Directions on Google Maps</a>
         </div>
 
         <!-- Campus Bus -->
-        <div class="l-block" id="l-bus">
-          <div class="l-block-header">
-            <span class="l-block-icon">🚌</span>
-            <span class="l-block-label">Campus Shuttle — Live Tracker</span>
+        <div class="logi-panel" id="lt-bus">
+          <div class="lp-head"><span class="lp-icon">🚌</span><span class="lp-title">Getting Around Campus</span></div>
+          <div class="lp-vehicle-box">
+            <div class="lp-vehicle-title"><span>🚗</span> Own Vehicle / Self-Drive</div>
+            <p style="font-size:0.83rem;color:var(--text);line-height:1.7;margin-bottom:0.5rem;">You can enter IIT Madras campus with your <strong>own vehicle via the Main Gate</strong> (Sardar Patel Road). Simply mention you're attending the <em>Computational Metagenomics Workshop</em> at NAC 2 (DA632).</p>
+            <div class="lp-speed-badge"><span>🚦</span><span>Campus Speed Limit: <strong>20 km/h</strong> inside the campus at all times.</span></div>
+            <div class="lp-mini-grid">
+              <div class="lp-mini-card"><div class="lp-mini-label">Gate to Use</div><div class="lp-mini-val">Main Gate, Sardar Patel Rd</div></div>
+              <div class="lp-mini-card"><div class="lp-mini-label">Parking Near Venue</div><div class="lp-mini-val">NAC 2 Building</div></div>
+            </div>
           </div>
-          <p style="font-size:0.82rem;color:var(--muted);margin-bottom:0.6rem;line-height:1.6;">IITM runs a free internal shuttle <strong style="color:var(--text);">every ~20 minutes</strong> connecting the Main Gate, hostels, NAC (our venue), and Velachery Gate. Track buses in real-time below:</p>
-          <div class="bus-tracker-wrap">
-            <iframe src="https://mm.themint.space/" title="IITM Campus Bus Live Tracker" loading="lazy" allowfullscreen></iframe>
-          </div>
-          <div class="bus-info-grid">
-            <div class="bus-info-card">
-              <div class="bus-info-label">Frequency</div>
-              <div class="bus-info-val">Every ~20 minutes</div>
-            </div>
-            <div class="bus-info-card">
-              <div class="bus-info-label">Route covers</div>
-              <div class="bus-info-val">Main Gate → Hostels → NAC → Velachery Gate</div>
-            </div>
-            <div class="bus-info-card">
-              <div class="bus-info-label">Cost</div>
-              <div class="bus-info-val">Free for all</div>
-            </div>
-            <div class="bus-info-card">
-              <div class="bus-info-label">Tracker</div>
-              <div class="bus-info-val"><a href="https://mm.themint.space/" target="_blank" style="color:var(--accent);">mm.themint.space ↗</a></div>
+          <div class="lp-bus-box">
+            <div class="lp-bus-title"><span>🚌</span> Campus Shuttle (Free Bus)</div>
+            <p style="font-size:0.83rem;color:var(--text);line-height:1.7;">Free shuttle buses run frequently between the <strong>Main Gate and NAC</strong>. Frequency is approximately <strong>every 20 minutes</strong>.</p>
+            <div class="lp-btn-row">
+              <a class="lp-btn-solid" href="https://mm.themint.space/" target="_blank">🗺 Live Bus Tracker <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></a>
+              <a class="lp-btn-outline" href="https://acr.iitm.ac.in/wp-content/uploads/2022/12/IIT-Map-FINAL-27-07-2021.pdf" target="_blank">⬇ Download Campus PDF Map</a>
             </div>
           </div>
         </div>
 
         <!-- Dining -->
-        <div class="l-block" id="l-dining">
-          <div class="l-block-header">
-            <span class="l-block-icon">🍴</span>
-            <span class="l-block-label">Dining Inside IITM</span>
+        <div class="logi-panel" id="lt-dining">
+          <div class="lp-head"><span class="lp-icon">🍴</span><span class="lp-title">Dining on Campus</span></div>
+          <div class="lp-food-grid">
+            <div class="lp-food-item">
+              <div class="lp-food-num">1</div>
+              <div><div class="lp-food-name">Campus Canteen (CC)</div><div class="lp-food-loc">Near the academic zone · Quick meals, snacks &amp; beverages</div></div>
+            </div>
+            <div class="lp-food-item">
+              <div class="lp-food-num">2</div>
+              <div><div class="lp-food-name">CCD — Cafe Coffee Day</div><div class="lp-food-loc">Inside campus · Coffee, sandwiches &amp; light bites</div></div>
+            </div>
+            <div class="lp-food-item">
+              <div class="lp-food-num">3</div>
+              <div>
+                <div class="lp-food-name">Isthara Food Court</div>
+                <div class="lp-food-loc">Multi-cuisine food court on campus · Order via app</div>
+                <a class="lp-app-btn" href="https://play.google.com/store/apps/details?id=com.tao.isthara&hl=en_IN" target="_blank">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5v-17c0-.83 1-.83 1.5-.5l15 8.5a.6.6 0 0 1 0 1L4.5 21c-.5.33-1.5.33-1.5-.5z"/></svg>
+                  Get Isthara App on Play Store
+                </a>
+              </div>
+            </div>
+            <div class="lp-food-item">
+              <div class="lp-food-num">4</div>
+              <div><div class="lp-food-name">Zaitoon Restaurant</div><div class="lp-food-loc">Inside campus · North Indian &amp; Mughlai cuisine</div></div>
+            </div>
+            <div class="lp-food-item">
+              <div class="lp-food-num">5</div>
+              <div><div class="lp-food-name">Mess (Hostel Dining)</div><div class="lp-food-warning">⚠️ Tokens required — purchase at CCW <strong>one day in advance</strong> for all 3 meals (breakfast, lunch, dinner)</div></div>
+            </div>
           </div>
-          <div class="l-food-item">
-            <span class="l-food-dot"></span>
-            <div><div class="l-food-name">Campus Cafe (CC)</div><div class="l-food-loc">Near the residential area — breakfast, lunch &amp; snacks</div></div>
-          </div>
-          <div class="l-food-item">
-            <span class="l-food-dot"></span>
-            <div><div class="l-food-name">Café Coffee Day (CCD)</div><div class="l-food-loc">Near Dept. of Management Studies</div></div>
-          </div>
-          <div class="l-food-item">
-            <span class="l-food-dot"></span>
-            <div><div class="l-food-name">Isthara — Himalaya Food Court</div><div class="l-food-loc">Himalaya Mess Complex — full meals</div></div>
-          </div>
-          <div class="l-food-item">
-            <span class="l-food-dot"></span>
-            <div><div class="l-food-name">Gurunath Stores &amp; Canteen</div><div class="l-food-loc">Student-run — affordable snacks &amp; beverages</div></div>
-          </div>
+          <div class="lp-hostel-note">🏠 <div><strong style="color:var(--text);">Hostel Facility:</strong> For accommodation &amp; hostel-related queries, visit the <strong style="color:var(--accent);">Centre for Cultural and Welfare (CCW)</strong> on campus.</div></div>
         </div>
 
         <!-- Hospital -->
-        <div class="l-block" id="l-hospital">
-          <div class="l-block-header">
-            <span class="l-block-icon">🏥</span>
-            <span class="l-block-label">Medical Facility</span>
-          </div>
-          <p style="font-size:0.82rem;color:var(--muted);line-height:1.6;margin-bottom:0.5rem;">IIT Madras has a <strong style="color:var(--text);">full-service hospital on campus</strong> — available to all students, staff, and registered visitors.</p>
-          <div class="hospital-card">
-            <div class="hospital-header">
-              <span style="font-size:1.1rem;">🏥</span>
-              <div>
-                <div class="hospital-name">IITM Campus Hospital</div>
-                <span class="hospital-tag">On Campus · Open 24/7</span>
-              </div>
+        <div class="logi-panel" id="lt-hospital">
+          <div class="lp-head"><span class="lp-icon">🏥</span><span class="lp-title">Medical Facility</span></div>
+          <p style="font-size:0.84rem;color:var(--muted);line-height:1.65;">IIT Madras has a <strong style="color:var(--text);">full-service hospital on campus</strong> — available to all students, staff, and registered workshop visitors.</p>
+          <div class="lp-hospital-card">
+            <div class="lp-hosp-head">
+              <span style="font-size:1.3rem;">🏥</span>
+              <div><div class="lp-hosp-name">IITM Campus Hospital</div><span class="lp-hosp-badge">On Campus · Open 24/7</span></div>
             </div>
-            <div class="hospital-detail">
-              <strong>Location:</strong> Near the Main Gate area, IIT Madras campus<br>
-              <strong>Services:</strong> General OPD, emergency care, pharmacy, specialist consultations<br>
-              <strong>Timings:</strong> OPD — 8:00 AM to 8:00 PM · Emergency — 24 hours<br>
-              <strong>For visitors:</strong> Workshop participants may access the hospital during the event
+            <div class="lp-hosp-rows">
+              <div class="lp-hosp-row"><strong>Location</strong> Near NAC I, IITM</div>
+              <div class="lp-hosp-row"><strong>Services</strong> General OPD, emergency care, pharmacy</div>
+              <div class="lp-hosp-row"><strong>OPD Timings</strong> 8:00 AM – 8:00 PM · Emergency 24 hrs</div>
+              <div class="lp-hosp-row"><strong>For Visitors</strong> Workshop participants may access during the event</div>
             </div>
           </div>
-          <a class="l-maps-btn" href="https://maps.google.com/?q=IIT+Madras+Hospital+Chennai" target="_blank">↗ Hospital on Google Maps</a>
-        </div>
-
-        <!-- IBSE -->
-        <div class="l-block" id="l-ibse">
-          <div class="l-block-header">
-            <span class="l-block-icon">🔬</span>
-            <span class="l-block-label">Organising Centre — IBSE</span>
-          </div>
-          <p style="font-size:0.82rem;color:var(--muted);line-height:1.6;margin-bottom:0.5rem;">This workshop is organised by the <strong style="color:var(--text);">Centre for Integrative Biology and Systems Medicine (IBSE)</strong> at IIT Madras — a research centre dedicated to systems biology, metagenomics, and computational biology.</p>
-          <a class="ibse-card" href="https://ibse.iitm.ac.in/" target="_blank">
-            <img src="ibse.png" alt="IBSE Logo" class="ibse-logo">
-            <div>
-              <div class="ibse-info-title">IBSE, IIT Madras</div>
-              <div class="ibse-info-sub">Centre for Integrative Biology and Systems Medicine<br>ibse.iitm.ac.in ↗</div>
-            </div>
-          </a>
-          <a class="ibse-card" href="https://home.iitm.ac.in/kraman/lab/" target="_blank" style="margin-top:0.5rem;">
-            <img src="iitm.png" alt="Raman Lab Logo" class="ibse-logo">
-            <div>
-              <div class="ibse-info-title">Raman Lab</div>
-              <div class="ibse-info-sub">Prof. Karthik Raman · WSAI, IIT Madras<br>home.iitm.ac.in/kraman/lab ↗</div>
-            </div>
-          </a>
+          <a class="lp-maps" href="https://maps.google.com/?q=IIT+Madras+Hospital+Chennai" target="_blank">↗ Hospital on Google Maps</a>
         </div>
 
         <!-- Requirements -->
-        <div class="l-block" id="l-requirements">
-          <div class="l-block-header">
-            <span class="l-block-icon">⚠️</span>
-            <span class="l-block-label">Mandatory Requirements</span>
-          </div>
-          <p style="font-size:0.82rem;color:var(--muted);margin-bottom:0.8rem;line-height:1.6;">To receive your <strong style="color:var(--text);">Certificate of Participation</strong>, the following are strictly enforced:</p>
-          <div class="l-req-item">
-            <span class="l-req-check">✓</span>
-            <div><div class="l-req-title">100% Attendance</div><div class="l-req-desc">Present for all sessions — April 7–9, 2026 (09:00 AM – 06:00 PM IST)</div></div>
-          </div>
-          <div class="l-req-item">
-            <span class="l-req-check">✓</span>
-            <div><div class="l-req-title">Daily Assignments</div><div class="l-req-desc">Completion of all hands-on practicals and assigned tasks each day</div></div>
-          </div>
-          <div class="l-req-item">
-            <span class="l-req-check">✓</span>
-            <div><div class="l-req-title">Laptop with Setup</div><div class="l-req-desc">Bring a laptop with WSL, Conda and QIIME 2 pre-installed — see Installation guide</div></div>
+        <div class="logi-panel" id="lt-requirements">
+          <div class="lp-head"><span class="lp-icon">⚠️</span><span class="lp-title">Mandatory Requirements</span></div>
+          <p style="font-size:0.84rem;color:var(--muted);margin-bottom:1rem;line-height:1.65;">To receive your <strong style="color:var(--text);">Certificate of Participation</strong>, the following are strictly enforced:</p>
+          <div class="lp-req-list">
+            <div class="lp-req-item"><span class="lp-req-check">✓</span><div><div class="lp-req-title">100% Attendance</div><div class="lp-req-desc">Present for all sessions — April 7–9, 2026 (09:00 AM – 06:00 PM IST)</div></div></div>
+            <div class="lp-req-item"><span class="lp-req-check">✓</span><div><div class="lp-req-title">Daily Assignments</div><div class="lp-req-desc">Completion of all hands-on practicals and assigned tasks each day</div></div></div>
+            <div class="lp-req-item"><span class="lp-req-check">✓</span><div><div class="lp-req-title">Laptop with Setup</div><div class="lp-req-desc">Bring a laptop with WSL, Conda and QIIME 2 pre-installed — see Installation guide</div></div></div>
           </div>
         </div>
 
         <!-- Campus Life -->
-        <div class="l-block" id="l-campus">
-          <div class="l-block-header">
-            <span class="l-block-icon">🦌</span>
-            <span class="l-block-label">Campus Life</span>
+        <div class="logi-panel" id="lt-campus">
+          <div class="lp-head"><span class="lp-icon">🦌</span><span class="lp-title">Campus Life</span></div>
+          <p class="lp-campus-note">IIT Madras is set inside a protected forest — state-of-the-art labs coexist with resident <strong>Blackbuck and spotted deer</strong> often spotted near the academic blocks. The campus also has a cricket ground, swimming pool, gymkhana, and the iconic Gajendra Circle.</p>
+          <div class="lp-nature-card">
+            <span style="font-size:1.3rem;flex-shrink:0;">🌿</span>
+            <div>
+              <div class="lp-nature-label">Enjoy the Environment Responsibly</div>
+              <div class="lp-nature-desc">Please <strong>do not disturb the natural habitat</strong> and <strong>do not feed the animals</strong> — the deer and Blackbuck are wild and their diet and behaviour should not be altered by human contact.</div>
+            </div>
           </div>
-          <p class="l-campus-note">IIT Madras is set inside a protected forest — state-of-the-art labs coexist with resident <strong>Blackbuck and spotted deer</strong> often spotted near the academic blocks. The campus also has a cricket ground, swimming pool, gymkhana, and the iconic Gajendra Circle.</p>
         </div>
 
-      </div>
-    </div>
+      </div><!-- /logi-content -->
+    </div><!-- /logi-wrap -->
   </div>
 </section>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  function lNav(blockId, el) {
-    document.querySelectorAll('.logistics-nav-item').forEach(i => i.classList.remove('active'));
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  function logiTab(panelId, el) {
+    document.querySelectorAll('.logi-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.logi-panel').forEach(p => p.classList.remove('active'));
     el.classList.add('active');
-    const target = document.getElementById(blockId);
-    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    document.getElementById(panelId).classList.add('active');
   }
 </script>
-<div class="divider"></div>
-
 <!-- CONTACT / REGISTER -->
 <section id="contact">
   <div class="wrapper">
@@ -1079,18 +1090,37 @@
         <div class="sec-tag">Get in Touch</div>
         <h2 class="sec-title">Have Questions?<br><em>We're Here.</em></h2>
         <div class="contact-info-rows">
+          
           <div class="c-row">
             <span class="c-ico">✉️</span>
-            <div><div class="c-lbl">For Any Queries</div><div class="c-val"><a href="mailto:nptelplus-workshop@nptel.iitm.ac.in">nptelplus-workshop@nptel.iitm.ac.in ↗</a></div></div>
-          </div>
+            <div>
+              <div class="c-lbl">For Any Queries</div>
+              <div class="c-val">
+              <div class="info-label">Queries</div>
+      <a href="mailto:nptelplus-workshop@nptel.iitm.ac.in" style="color:var(--accent4); text-decoration: none; word-break: break-all; font-size: 0.85rem; display: block;">
+        nptelplus-workshop@nptel.iitm.ac.in
+      </a>
+              </div>
+              </div>
+            </div>
+    
+
           <div class="c-row">
             <span class="c-ico">📍</span>
-            <div><div class="c-lbl">Venue</div><div class="c-val"><a href="https://maps.google.com/?q=NAC+2+IIT+Madras+Chennai" target="_blank">NAC 2, IIT Madras, Chennai 600036 ↗</a></div></div>
+            <div>
+              <div class="c-lbl">Venue</div>
+              <div class="c-val"><a href="https://maps.google.com/?q=NAC+2+IIT+Madras+Chennai" target="_blank">NAC 2, IIT Madras, Chennai 600036 ↗</a></div>
+            </div>
           </div>
+
           <div class="c-row">
             <span class="c-ico">🏢</span>
-            <div><div class="c-lbl">Hosted By</div><div class="c-val"><a href="https://wsai.iitm.ac.in/" target="_blank">WSAI × NPTEL+, IIT Madras ↗</a></div></div>
+            <div>
+              <div class="c-lbl">Hosted By</div>
+              <div class="c-val"><a href="https://wsai.iitm.ac.in/" target="_blank">WSAI × IBSE × NPTEL+, IIT Madras ↗</a></div>
+            </div>
           </div>
+
         </div>
       </div>
       <div class="register-panel">
@@ -1115,7 +1145,6 @@
         <a href="#instructors">Instructors</a>
         <a href="#fees">Fees</a>
         <a href="#installation">Installation</a>
-        <a href="#resources">Resources</a>
         <a href="#logistics">Logistics</a>
         <a href="#contact">Contact</a>
         <a href="https://github.com/ramanlab/workshop" rel="noopener noreferrer" target="_blank">GitHub ↗</a>
@@ -1124,7 +1153,7 @@
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   /* PARTICLE NETWORK — exact bg.html style */
   const canvas = document.getElementById('bg-canvas');
   const ctx = canvas.getContext('2d');
@@ -1212,7 +1241,8 @@
   // Apply saved or default light theme
   (function(){
     var saved=localStorage.getItem('theme');
-    setTheme(saved==='blue'?'blue':'light');
+    var valid=['light','dark','blue'];
+    setTheme(valid.indexOf(saved)>-1 ? saved : 'light');
   })();
 
   /* SIDEBAR */
@@ -1232,19 +1262,22 @@
   document.getElementById('mobClose').addEventListener('click',()=>document.getElementById('mobileMenu').classList.remove('open'));
   function closeMob(){document.getElementById('mobileMenu').classList.remove('open');}
 
-  /* DAY ACCORDION */
+  /* SCHEDULE DAY TOGGLE */
   function toggleDay(id){
     const card=document.getElementById(id);
     card.classList.toggle('open');
   }
 
   /* FADE-UP OBSERVER */
-  function initFadeUp(){
-    const els=document.querySelectorAll('.fade-up');
-    // Immediately mark all as visible (no hiding content)
-    els.forEach(el=>el.classList.add('visible'));
+  const faders=document.querySelectorAll('.fade-up');
+  if('IntersectionObserver' in window){
+    const obs=new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});
+    },{threshold:0.08});
+    faders.forEach(el=>obs.observe(el));
+  } else {
+    faders.forEach(el=>el.classList.add('visible'));
   }
-  initFadeUp();
 </script>
 </body>
 </html>
