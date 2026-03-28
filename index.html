@@ -190,7 +190,7 @@
 
     /* ABOUT */
     #about{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
-    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
+    .about-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:4rem;align-items:start;}
     .about-text p{color:var(--muted);font-size:0.93rem;line-height:1.85;margin-bottom:1rem;}
     .features{list-style:none;display:flex;flex-direction:column;gap:0.5rem;margin-top:1.2rem;}
     .features li{display:flex;gap:0.75rem;align-items:flex-start;font-size:0.9rem;color:var(--text);}
@@ -324,8 +324,15 @@
       .cta-row{flex-direction:column;align-items:flex-start;}
       .logo-row{gap:1rem;}
 
-      /* About */
+      /* About info cards — 2 col grid on mobile */
+      .info-stack{display:grid;grid-template-columns:1fr 1fr;gap:0.7rem;}
+      .info-card{padding:0.8rem 0.9rem;}
+      .info-val{font-size:0.85rem;}
+      /* About — stack text above info cards */
       .about-grid{grid-template-columns:1fr;gap:2rem;}
+      .info-stack{display:grid;grid-template-columns:1fr 1fr;gap:0.7rem;}
+      .info-card{padding:0.8rem 1rem;}
+      .info-val{font-size:0.85rem;line-height:1.4;}
 
       /* Instructors */
       .instr-row{grid-template-columns:1fr;}
@@ -377,6 +384,7 @@
       .sec-title{font-size:1.6rem;}
       .fees-grid{grid-template-columns:1fr;}
       .stats-row{grid-template-columns:1fr 1fr;}
+      .info-stack{grid-template-columns:1fr;}
       .logi-sidebar{overflow-x:auto;flex-wrap:nowrap;}
       .logi-tab .lt-icon{display:none;}
       .logi-tab{font-size:0.68rem;padding:0.5rem 0.5rem;}
@@ -553,7 +561,7 @@
 <!-- ABOUT -->
 <section id="about" style="padding: 80px 0;">
   <div class="wrapper">
-    <div class="about-grid" style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; align-items: start;">
+    <div class="about-grid">
       
       <div class="about-text">
         <div class="sec-tag fade-up">About the Workshop</div>
@@ -569,7 +577,7 @@
         </ul>
       </div>
 
-      <div class="info-stack fade-up" style="display: flex; flex-direction: column; gap: 1rem;">
+      <div class="info-stack fade-up">
         <div class="info-card">
           <div class="info-icon">📅</div>
           <div><div class="info-label">Dates</div><div class="info-val">7th – 9th April, 2026</div></div>
