@@ -490,20 +490,27 @@
   </div>
 
   <div class="sidebar-section">
-    <div class="sidebar-section-label">External Links</div>
-    <a class="sidebar-ext" href="https://elearn.nptel.ac.in/shop/iit-workshops/ongoing/others/national-workshop-on-computational-metagenomics-methods-and-applications/?v=13b5bfe96f3e" target="_blank">
-      <div><div class="sidebar-ext-label">Official Page</div>NPTEL+ Workshop</div>
-      <span>↗</span>
-    </a>
-    <a class="sidebar-ext" href="https://docs.google.com/forms/d/e/1FAIpQLSdwgllMOG9YpY52nB1zRTNf6wnrrvxmAiMhm65kqEchR7R2Ig/viewform" target="_blank">
-      <div><div class="sidebar-ext-label">Registration</div>Google Form</div>
-      <span>↗</span>
-    </a>
-    <a class="sidebar-ext" href="https://wsai.iitm.ac.in/" target="_blank">
-      <div><div class="sidebar-ext-label">Institution</div>WSAI, IIT Madras</div>
-      <span>↗</span>
-    </a>
+  <div class="sidebar-section-label">External Links</div>
+  
+  <a class="sidebar-ext" href="https://elearn.nptel.ac.in/shop/iit-workshops/ongoing/others/national-workshop-on-computational-metagenomics-methods-and-applications/?v=13b5bfe96f3e" target="_blank">
+    <div><div class="sidebar-ext-label">Official Page</div>NPTEL+ Workshop</div>
+    <span>↗</span>
+  </a>
+
+  <div class="sidebar-ext" style="opacity: 0.5; cursor: not-allowed; border-color: rgba(255,255,255,0.1);">
+    <div>
+      <div class="sidebar-ext-label">Registration</div>
+      <span style="text-decoration: line-through;">Google Form</span> 
+      <span style="font-size: 0.8em; margin-left: 4px; color: #ff6b6b;">(Closed)</span>
+    </div>
+    <span>✕</span>
   </div>
+
+  <a class="sidebar-ext" href="https://wsai.iitm.ac.in/" target="_blank">
+    <div><div class="sidebar-ext-label">Institution</div>WSAI, IIT Madras</div>
+    <span>↗</span>
+  </a>
+</div>
 
   <div class="sidebar-section">
     <div class="sidebar-section-label">Theme</div>
@@ -536,7 +543,6 @@
       <div class="theme-dot t-dark" onclick="setTheme('dark')" title="Dark">🌿</div>
       <div class="theme-dot t-blue" onclick="setTheme('blue')" title="Blue">🌙</div>
     </div>
-    <a class="btn-reg-nav" href="https://docs.google.com/forms/d/e/1FAIpQLSdwgllMOG9YpY52nB1zRTNf6wnrrvxmAiMhm65kqEchR7R2Ig/viewform" target="_blank">Register →</a>
     <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
   </div>
 </nav>
@@ -566,8 +572,26 @@
   <strong><a href="https://ramanlab.github.io/" target="_blank" style="color: var(--accent); text-decoration: underline;">Computational Systems Biology Lab</a></strong>.
 </p>
     <div class="cta-row">
-      <a class="btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSdwgllMOG9YpY52nB1zRTNf6wnrrvxmAiMhm65kqEchR7R2Ig/viewform" target="_blank">Register Now →</a>
-      <a class="btn-ghost" href="#schedule">View Schedule</a>
+      <span class="btn-primary closed-btn">Registration Closed</span>
+
+<style>
+  /* This ensures the button looks like your previous bright box theme */
+  .btn-primary.closed-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: rgba(52, 211, 153, 0.1); /* Subtle green tint */
+    color: #34d399; /* Bright accent green */
+    border: 2px solid #34d399; /* Bright border */
+    border-radius: 8px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    cursor: not-allowed;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+  }
+</style>
+    <a class="btn-ghost" href="#schedule">View Schedule</a>
     </div>
     <div class="stats-row fade-up">
       <div class="stat-cell">
@@ -580,7 +604,7 @@
       </div>
       <div class="stat-cell">
         <div class="stat-label">Venue</div>
-        <div class="stat-val">NAC 2, <b>IITM</b></div>
+        <div class="stat-val">NAC 2, <b>IIT Madras</b></div>
       </div>
       <div class="stat-cell">
         <div class="stat-label">Deadline</div>
@@ -675,7 +699,7 @@
         </div>
         <div class="info-card">
           <div class="info-icon">📍</div>
-          <div><div class="info-label">Venue</div><div class="info-val">NAC 2, IIT Madras, Chennai</div></div>
+          <div><div class="info-label">Venue</div><div class="info-val">Room No.601, NAC 2, 6th floor, IIT Madras, Chennai</div></div>
         </div>
         <div class="info-card">
           <div class="info-icon">🕘</div>
@@ -858,7 +882,7 @@
         </table>
       </div>
     </div>
-
+    
     <!-- DAY 2 -->
     <div class="day-card fade-up" id="day2">
       <div class="day-trigger" onclick="toggleDay('day2')">
@@ -1147,7 +1171,7 @@
         <div class="logi-panel active" id="lt-location">
           <div class="lp-head"><span class="lp-icon">📍</span><span class="lp-title">Venue Location</span></div>
           <div class="lp-row"><span class="lp-key">Venue</span><span class="lp-val"><strong>NAC 2</strong> — New Academic Complex, Block 2<br>IIT Madras, Chennai 600036</span></div>
-          <div class="lp-row"><span class="lp-key">Room</span><span class="lp-val"><strong>DA601</strong> — 6th Floor</span></div>
+          <div class="lp-row"><span class="lp-key">Room</span><span class="lp-val"><strong>Room No.601</strong> — 6th Floor</span></div>
           <div class="lp-row"><span class="lp-key">Preferred Gate</span><span class="lp-val">Main Gate (Sardar Patel Rd)</span></div>
           <a class="lp-maps" href="https://maps.google.com/?q=NAC+2+IIT+Madras+Chennai" target="_blank">↗ View on Google Maps</a>
         </div>
@@ -1292,7 +1316,7 @@
             <span class="c-ico">📍</span>
             <div>
               <div class="c-lbl">Venue</div>
-              <div class="c-val"><a href="https://maps.google.com/?q=NAC+2+IIT+Madras+Chennai" target="_blank">NAC 2, IIT Madras, Chennai 600036 ↗</a></div>
+              <div class="c-val"><a href="https://maps.google.com/?q=NAC+2+IIT+Madras+Chennai" target="_blank">Room No.601, NAC 2, 6th floor, IIT Madras, Chennai-600036 ↗</a></div>
             </div>
           </div>
 
@@ -1306,13 +1330,81 @@
 
         </div>
       </div>
-      <div class="register-panel">
-        <div class="reg-deadline">⏰ Registration Deadline: 30th March 2026</div>
-        <div class="reg-title">Ready to Register?</div>
-        <div class="reg-sub">Seats are limited. Secure your place at one of India's premier computational biology workshops.</div>
-        <a class="reg-btn-main" href="https://docs.google.com/forms/d/e/1FAIpQLSdwgllMOG9YpY52nB1zRTNf6wnrrvxmAiMhm65kqEchR7R2Ig/viewform" target="_blank">Register via Google Form →</a>
-        <a class="reg-btn-sec" href="https://elearn.nptel.ac.in/shop/iit-workshops/ongoing/others/national-workshop-on-computational-metagenomics-methods-and-applications/?v=13b5bfe96f3e" target="_blank">View on NPTEL+ ↗</a>
-      </div>
+     <div class="register-panel registration-closed-bright">
+  <div class="closed-badge">Registration Closed</div>
+  <h3 class="closed-title">Deadline is Over</h3>
+  <p class="closed-text">
+    For future updates, please follow us on<a href="https://in.linkedin.com/in/ramankarthik" target="_blank" style="color: #34d399; text-decoration: underline; font-weight: 600;"> LinkedIn</a>.
+  </p>
+  <p class="closed-text" style="margin-top: -10px; margin-bottom: 20px;">
+    We look forward to meeting all registered participants at:
+  </p>
+  <div class="venue-highlight">
+    <span class="venue-icon">📍</span>
+    <div>
+      <strong>NAC 2, 6th Floor</strong><br>
+      Room Number 601, IIT Madras
+    </div>
+  </div>
+</div>
+
+<style>
+  .register-panel.registration-closed-bright {
+    background: linear-gradient(145deg, #102a1c, #081810); /* Brighter green-tinted dark box */
+    border: 2px solid #34d399; /* Bright accent border */
+    padding: 40px 25px;
+    border-radius: 16px;
+    text-align: left;
+    max-width: 500px;
+    margin: 20px 0; /* Pushed to the left */
+    box-shadow: 0 10px 40px rgba(52, 211, 153, 0.2); /* Bright glow effect */
+  }
+
+  .closed-badge {
+    display: inline-block;
+    background: rgba(52, 211, 153, 0.15);
+    color: #34d399;
+    padding: 6px 16px;
+    border-radius: 100px;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid #34d399;
+    margin-bottom: 20px;
+  }
+
+  .closed-title {
+    font-family: 'Instrument Serif', serif;
+    font-size: 2.2rem;
+    color: #fff;
+    margin-bottom: 12px;
+    font-style: italic;
+  }
+
+  .closed-text {
+    color: #e0e0e0; /* Brighter text for readability */
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+  }
+
+  .venue-highlight {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(52, 211, 153, 0.1);
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(52, 211, 153, 0.3);
+    color: #34d399;
+  }
+
+  .venue-icon {
+    font-size: 1.5rem;
+  }
+</style>
+
     </div>
   </div>
 </section>
