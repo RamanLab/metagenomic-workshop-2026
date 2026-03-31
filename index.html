@@ -233,13 +233,13 @@
     .day-card.open .day-arrow{transform:rotate(180deg);}
     .day-body{display:none;border-top:1px solid var(--border);}
     .day-card.open .day-body{display:block;}
-    .schedule-table{width:100%;border-collapse:collapse;}
+    .schedule-table{width:100%;border-collapse:collapse;table-layout:fixed;}
     .schedule-table td{padding:0.7rem 1.5rem;font-size:0.86rem;border-bottom:1px solid var(--border2);vertical-align:top;font-family:'Outfit',sans-serif;}
     .schedule-table tr:last-child td{border-bottom:none;}
     .schedule-table tr.sec-row td{background:rgba(61,224,138,0.06);font-family:'Instrument Serif',serif;font-size:0.95rem;font-style:italic;color:var(--accent);padding:0.55rem 1.5rem;}
     .schedule-table tr.break-row td{color:var(--muted);font-style:italic;font-size:0.8rem;font-family:'Instrument Serif',serif;letter-spacing:0.01em;}
-    .t-cell{font-family:var(--mono);font-size:0.68rem;color:var(--accent);white-space:nowrap;min-width:110px;}
     .ev-main{font-weight:600;margin-bottom:0.15rem;font-family:'Outfit',sans-serif;font-size:0.88rem;letter-spacing:0.005em;}
+    .t-cell{font-family:var(--mono);font-size:0.68rem;color:var(--accent);white-space:nowrap;width:140px;}
     .ev-sub{font-size:0.76rem;color:var(--muted);line-height:1.45;font-family:'Instrument Serif',serif;font-style:italic;}
 
     /* INSTRUCTORS */
@@ -851,10 +851,10 @@
       <div class="day-trigger" onclick="toggleDay('day1')">
         <div class="day-trigger-left">
           <span class="day-num">Day 01</span>
-          <span class="day-name">Amplicon Metagenomics &amp; 16S Analysis</span>
+          <span class="day-name">16s Amplicon sequencing analysis</span>
         </div>
         <div style="display:flex;align-items:center;gap:1rem;">
-          <span class="day-date">Tue, 7 April 2026</span>
+          <span class="day-date">April 7, 2026</span>
           <span class="day-arrow">▼</span>
         </div>
       </div>
@@ -864,21 +864,21 @@
             <tr><td class="t-cell">09:00 – 10:00</td><td><div class="ev-main">Registration</div></td></tr>
             <tr class="sec-row"><td colspan="2">Morning Session 1</td></tr>
             <tr><td class="t-cell">10:00 – 10:15</td><td><div class="ev-main">Opening Remarks &amp; Workshop Vision</div></td></tr>
-            <tr><td class="t-cell">10:15 – 11:00</td><td><div class="ev-main">Foundations of Metagenomics</div><div class="ev-sub">What, why, and how of metagenomics</div></td></tr>
+            <tr><td class="t-cell">10:15 – 11:00</td><td><div class="ev-main">Foundations of Metagenomics</div><div class="ev-sub">Understanding the “what, why, and how” of metagenomics</div></td></tr>
             <tr class="break-row"><td class="t-cell">11:00 – 11:15</td><td>☕ Tea Break</td></tr>
             <tr class="sec-row"><td colspan="2">Morning Session 2</td></tr>
-            <tr><td class="t-cell">11:15 – 12:15</td><td><div class="ev-main">Introduction to 16S: Amplicon Theory</div><div class="ev-sub">Principles, experimental design, workflows, and common challenges</div></td></tr>
-            <tr><td class="t-cell">12:15 – 13:00</td><td><div class="ev-main">Installation &amp; Getting Started</div><div class="ev-sub">CLI basics; hands-on tool setup</div></td></tr>
+            <tr><td class="t-cell">11:15 – 12:15</td><td><div class="ev-main">Introduction to 16S Amplicon sequencing:  Theory & Discussion</div><div class="ev-sub">Principles, experimental design, workflows, and common challenges</div></td></tr>
+            <tr><td class="t-cell">12:15 – 13:00</td><td><div class="ev-main">Installation &amp; Getting Started</div><div class="ev-sub">Command line interface (CLI) basics, Hands-on setup of tools and environments for amplicon analysis</div></td></tr>
             <tr class="break-row"><td class="t-cell">13:00 – 14:30</td><td>🍽️ Lunch Break</td></tr>
             <tr class="sec-row"><td colspan="2">Afternoon Session 1</td></tr>
-            <tr><td class="t-cell">14:30 – 16:00</td><td><div class="ev-main">Data in Action (Part I)</div><div class="ev-sub">Guided hands-on practicals with real datasets</div></td></tr>
-            <tr class="break-row"><td class="t-cell">16:00 – 16:15</td><td>☕ Tea Break</td></tr>
+            <tr><td class="t-cell">14:30 – 15:30</td><td><div class="ev-main">Data in Action (Part I)</div><div class="ev-sub">Guided hands-on practicals working with real datasets and understanding core analysis steps, interpretation</div></td></tr>
             <tr class="sec-row"><td colspan="2">Afternoon Session 2</td></tr>
-            <tr><td class="t-cell">16:15 – 17:00</td><td><div class="ev-main">Data in Action (Part II)</div><div class="ev-sub">Workflow completion, troubleshooting, assignment</div></td></tr>
-            <tr><td class="t-cell">17:00 – 17:15</td><td><div class="ev-main">Buffer Zone &amp; Wrap-up</div></td></tr>
+            <tr><td class="t-cell">15:30 – 16:00</td><td><div class="ev-main">Data in Action (Part II)</div><div class="ev-sub">Workflow Completion Guided analysis, troubleshooting</div></td></tr>
+            <tr><td class="t-cell">16:00 – 16:30</td><td><div class="ev-main">Evaluated assignment</div></td></tr>
+            <tr class="break-row"><td class="t-cell">16:30 – 16:45</td><td>☕ Tea Break</td></tr>
             <tr class="sec-row"><td colspan="2">Evening Lecture</td></tr>
-            <tr><td class="t-cell">17:15 – 17:45</td><td><div class="ev-main">Beyond the Bench: Applications &amp; Future Perspectives</div><div class="ev-sub">Clinical, environmental, and industrial perspectives</div></td></tr>
-          </tbody>
+            <tr><td class="t-cell">16:45 – 17:30</td><td><div class="ev-main">Guest lecture by Dr. Rama Vaidyanathan</div></td></tr>
+            </tbody>
         </table>
       </div>
     </div>
@@ -888,16 +888,20 @@
       <div class="day-trigger" onclick="toggleDay('day2')">
         <div class="day-trigger-left">
           <span class="day-num">Day 02</span>
-          <span class="day-name">Shotgun Sequencing, Assembly &amp; Functional Annotation</span>
+          <span class="day-name">Shotgun sequencing, genome assembly, and functional annotation</span>
         </div>
         <div style="display:flex;align-items:center;gap:1rem;">
-          <span class="day-date">Wed, 8 April 2026</span>
+          <span class="day-date">April 8, 2026</span>
           <span class="day-arrow">▼</span>
         </div>
       </div>
       <div class="day-body">
         <table class="schedule-table">
           <tbody>
+            <tr style="height:0; visibility:hidden;">
+            <td class="t-cell" style="padding:0; height:0;"></td>
+            <td style="padding:0; height:0;"></td>
+            </tr>
             <tr class="sec-row"><td colspan="2">Morning Session 1</td></tr>
             <tr><td class="t-cell">09:00 – 09:45</td><td><div class="ev-main">Introduction to Shotgun Sequencing</div><div class="ev-sub">Long read vs short read; Illumina, Nanopore, Oxford — choosing the right approach</div></td></tr>
             <tr><td class="t-cell">09:45 – 11:00</td><td><div class="ev-main">Data Quality Checks &amp; Pre-processing</div><div class="ev-sub">FastQC · Trimmomatic · Kraken2 · Bracken</div></td></tr>
@@ -914,7 +918,7 @@
             <tr><td class="t-cell">15:45 – 16:15</td><td><div class="ev-main">Buffer Zone &amp; Troubleshooting</div></td></tr>
             <tr><td class="t-cell">16:15 – 16:45</td><td><div class="ev-main">Network Analysis</div></td></tr>
             <tr class="sec-row"><td colspan="2">Evening Lecture</td></tr>
-            <tr><td class="t-cell">16:45 – 17:15</td><td><div class="ev-main">ML in Microbiome</div></td></tr>
+            <tr><td class="t-cell">16:45 – 17:30</td><td><div class="ev-main">Guest lecture by Dr. Meiyappan Lakshmanan</div></td></tr>
           </tbody>
         </table>
       </div>
@@ -925,30 +929,33 @@
       <div class="day-trigger" onclick="toggleDay('day3')">
         <div class="day-trigger-left">
           <span class="day-num">Day 03</span>
-          <span class="day-name">Statistical Analysis, ML &amp; Capstone</span>
+          <span class="day-name">Statistical analysis, Machine learning in microbiome research</span>
         </div>
         <div style="display:flex;align-items:center;gap:1rem;">
-          <span class="day-date">Thu, 9 April 2026</span>
+          <span class="day-date">April 9, 2026</span>
           <span class="day-arrow">▼</span>
         </div>
       </div>
       <div class="day-body">
         <table class="schedule-table">
           <tbody>
+            <tr style="height:0; visibility:hidden;">
+            <td class="t-cell" style="padding:0; height:0;"></td>
+            <td style="padding:0; height:0;"></td>
+            </tr>
             <tr class="sec-row"><td colspan="2">Morning Session 1</td></tr>
-            <tr><td class="t-cell">09:00 – 10:00</td><td><div class="ev-main">Data Pre-processing for Statistical Analysis</div></td></tr>
+            <tr><td class="t-cell">09:00 – 10:00</td><td><div class="ev-main">ML in metagenomics (Online session)</div></td></tr>
             <tr class="break-row"><td class="t-cell">10:00 – 10:15</td><td>☕ Tea Break</td></tr>
             <tr class="sec-row"><td colspan="2">Morning Session 2</td></tr>
-            <tr><td class="t-cell">10:15 – 12:00</td><td><div class="ev-main">Diversity &amp; Differential Abundance Testing</div></td></tr>
+            <tr><td class="t-cell">10:15 – 12:00</td><td><div class="ev-main">Statistical Analysis with R </div><div class="ev-sub">Data pre-processing, diversity and differential analysis</div></td></tr>
             <tr class="break-row"><td class="t-cell">12:00 – 13:30</td><td>🍽️ Lunch Break</td></tr>
             <tr class="sec-row"><td colspan="2">Afternoon Session</td></tr>
-            <tr><td class="t-cell">13:30 – 14:30</td><td><div class="ev-main">Hands-on Analysis</div><div class="ev-sub">Applying statistical methods to demo data</div></td></tr>
-            <tr><td class="t-cell">14:30 – 15:00</td><td><div class="ev-main">Assignment</div></td></tr>
-            <tr><td class="t-cell">15:00 – 15:45</td><td><div class="ev-main">Guest Lecture</div></td></tr>
+            <tr><td class="t-cell">13:30 – 15:00</td><td><div class="ev-main">Hands-on Analysis</div><div class="ev-sub">Applying statistical methods to demo data</div></td></tr>
+            <tr><td class="t-cell">15:00 – 15:45</td><td><div class="ev-main">Assignment</div></td></tr>
             <tr class="break-row"><td class="t-cell">15:45 – 16:30</td><td>☕ High Tea</td></tr>
             <tr class="sec-row"><td colspan="2">Evening</td></tr>
-            <tr><td class="t-cell">16:30 – 17:15</td><td><div class="ev-main">Guest Lecture</div></td></tr>
-            <tr><td class="t-cell">17:15 – 17:30</td><td><div class="ev-main">🎓 Valedictory &amp; Certificate Ceremony</div><div class="ev-sub">Closing remarks, feedback, and next steps</div></td></tr>
+            <tr><td class="t-cell">16:30 – 17:15</td><td><div class="ev-main">Guest lecture by Dr. Karthik Raman</div></td></tr>
+            <tr><td class="t-cell">17:15 – 17:30</td><td><div class="ev-main">🎓 Valedictory</div><div class="ev-sub">Closing remarks, feedback, and next steps</div></td></tr>
           </tbody>
         </table>
       </div>
