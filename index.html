@@ -339,6 +339,13 @@
 
     @media (max-width: 768px) {
       /* Wrapper padding */
+      .inst-day-grid { grid-template-columns: 1fr; }
+      @media (min-width: 769px) {
+  .inst-day-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 769px) {
+  .inst-day-grid { grid-template-columns: repeat(3, 1fr); }
+}
       .wrapper{padding:0 1rem;}
 
       /* Hide desktop nav links, show hamburger */
@@ -440,6 +447,8 @@
     @media(min-width:769px) and (max-width:1024px){
       .hero-title-new{font-size:clamp(1.8rem,3.5vw,2.8rem);}
     }
+    .inst-day-grid { grid-template-columns: 1fr; }
+@media(min-width:769px){ .inst-day-grid { grid-template-columns: repeat(3,1fr); } }
     /* ── THEME FIXES ── */
     body.light .stat-cell{background:#ffffff;}
     body.light .info-card{background:#ffffff;}
@@ -1049,68 +1058,37 @@
         Download Complete Installation Guide
       </a>
     </div>
-    <!-- DAY LINKS CARDS — paste after the Download button div, before </div></section> -->
-<div style="margin-top:2.5rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;" class="fade-up">
-  
 
- <!-- DAY 1 -->
-  <a href="https://docs.google.com/document/d/1wpPvi6ldU993q_0Lj1fNMoZq6m371RhDARbZDRxbem4/edit?tab=t.6ictnyet5uy1#heading=h.eyj5eu5t1oci" target="_blank" style="
-    display:block;text-decoration:none;
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:var(--r);
-    padding:1.6rem 1.4rem;
-    position:relative;overflow:hidden;
-    transition:all 0.25s;
-  " onmouseover="this.style.borderColor='var(--accent)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 28px rgba(52,211,153,0.12)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='';this.style.boxShadow=''">
-    <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent4));"></div>
-    <div style="font-family:var(--mono);font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:0.5rem;">April 7, 2026</div>
-    <div style="font-family:'Instrument Serif',serif;font-size:1.4rem;color:var(--text);margin-bottom:0.35rem;line-height:1.1;">Day 1</div>
-    <div style="font-size:0.78rem;color:var(--muted);margin-bottom:1.2rem;line-height:1.5;">Amplicon Sequencing &amp; Taxonomy</div>
-    <div style="display:inline-flex;align-items:center;gap:0.4rem;font-family:var(--mono);font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);background:var(--accent-dim);border:1px solid var(--border);border-radius:4px;padding:0.35rem 0.8rem;">
-      Open Guide <span>↗</span>
+    <div class="inst-day-grid fade-up" style="margin-top:2rem;display:grid;gap:1rem;">
+
+      <!-- DAY 1 -->
+      <a href="https://docs.google.com/document/d/1wpPvi6ldU993q_0Lj1fNMoZq6m371RhDARbZDRxbem4/edit?tab=t.6ictnyet5uy1#heading=h.eyj5eu5t1oci" target="_blank" style="display:block;text-decoration:none;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:0.9rem 1rem;position:relative;overflow:hidden;transition:all 0.25s;" onmouseover="this.style.borderColor='var(--accent)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 28px rgba(52,211,153,0.12)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='';this.style.boxShadow=''">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent4));"></div>
+        <div style="font-family:var(--mono);font-size:0.52rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:0.3rem;">April 7, 2026</div>
+        <div style="font-family:'Instrument Serif',serif;font-size:1.1rem;color:var(--text);margin-bottom:0.2rem;line-height:1.1;">Day 1</div>
+        <div style="font-size:0.74rem;color:var(--muted);margin-bottom:0.8rem;line-height:1.4;">Amplicon Sequencing &amp; Taxonomy</div>
+        <div style="display:inline-flex;align-items:center;gap:0.4rem;font-family:var(--mono);font-size:0.56rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);background:var(--accent-dim);border:1px solid var(--border);border-radius:4px;padding:0.25rem 0.65rem;">Open Guide <span>↗</span></div>
+      </a>
+
+      <!-- DAY 2 -->
+      <a href="https://docs.google.com/document/d/1ZWbGkK5sNxxwCv2_9xriOYKpyCjbLKwxz5TFGrdjtcs/edit?tab=t.0" target="_blank" style="display:block;text-decoration:none;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:0.9rem 1rem;position:relative;overflow:hidden;transition:all 0.25s;" onmouseover="this.style.borderColor='var(--accent)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 28px rgba(52,211,153,0.12)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='';this.style.boxShadow=''">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent4),var(--accent));"></div>
+        <div style="font-family:var(--mono);font-size:0.52rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:0.3rem;">April 8, 2026</div>
+        <div style="font-family:'Instrument Serif',serif;font-size:1.1rem;color:var(--text);margin-bottom:0.2rem;line-height:1.1;">Day 2</div>
+        <div style="font-size:0.74rem;color:var(--muted);margin-bottom:0.8rem;line-height:1.4;">Shotgun Sequencing &amp; MAGs</div>
+        <div style="display:inline-flex;align-items:center;gap:0.4rem;font-family:var(--mono);font-size:0.56rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);background:var(--accent-dim);border:1px solid var(--border);border-radius:4px;padding:0.25rem 0.65rem;">Open Guide <span>↗</span></div>
+      </a>
+
+      <!-- DAY 3 -->
+      <a href="https://docs.google.com/document/d/1fmpjCXeGafv1GRqnVKJmnN5CVg3OvSqtlyUo9VI5GgE/edit?tab=t.0" target="_blank" style="display:block;text-decoration:none;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:0.9rem 1rem;position:relative;overflow:hidden;transition:all 0.25s;" onmouseover="this.style.borderColor='var(--accent)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 28px rgba(52,211,153,0.12)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='';this.style.boxShadow=''">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent3),var(--accent));"></div>
+        <div style="font-family:var(--mono);font-size:0.52rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:0.3rem;">April 9, 2026</div>
+        <div style="font-family:'Instrument Serif',serif;font-size:1.1rem;color:var(--text);margin-bottom:0.2rem;line-height:1.1;">Day 3</div>
+        <div style="font-size:0.74rem;color:var(--muted);margin-bottom:0.8rem;line-height:1.4;">Statistics &amp; Machine Learning</div>
+        <div style="display:inline-flex;align-items:center;gap:0.4rem;font-family:var(--mono);font-size:0.56rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);background:var(--accent-dim);border:1px solid var(--border);border-radius:4px;padding:0.25rem 0.65rem;">Open Guide <span>↗</span></div>
+      </a>
+
     </div>
-  </a>
-
-  <!-- DAY 2 -->
-  <a href="https://docs.google.com/document/d/1ZWbGkK5sNxxwCv2_9xriOYKpyCjbLKwxz5TFGrdjtcs/edit?tab=t.0" target="_blank" style="
-    display:block;text-decoration:none;
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:var(--r);
-    padding:1.6rem 1.4rem;
-    position:relative;overflow:hidden;
-    transition:all 0.25s;
-  " onmouseover="this.style.borderColor='var(--accent)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 28px rgba(52,211,153,0.12)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='';this.style.boxShadow=''">
-    <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent4),var(--accent));"></div>
-    <div style="font-family:var(--mono);font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:0.5rem;">April 8, 2026</div>
-    <div style="font-family:'Instrument Serif',serif;font-size:1.4rem;color:var(--text);margin-bottom:0.35rem;line-height:1.1;">Day 2</div>
-    <div style="font-size:0.78rem;color:var(--muted);margin-bottom:1.2rem;line-height:1.5;">Shotgun Sequencing &amp; MAGs</div>
-    <div style="display:inline-flex;align-items:center;gap:0.4rem;font-family:var(--mono);font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);background:var(--accent-dim);border:1px solid var(--border);border-radius:4px;padding:0.35rem 0.8rem;">
-      Open Guide <span>↗</span>
-    </div>
-  </a>
-
-  <!-- DAY 3 -->
-  <a href="https://docs.google.com/document/d/1fmpjCXeGafv1GRqnVKJmnN5CVg3OvSqtlyUo9VI5GgE/edit?tab=t.0" target="_blank" style="
-    display:block;text-decoration:none;
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:var(--r);
-    padding:1.6rem 1.4rem;
-    position:relative;overflow:hidden;
-    transition:all 0.25s;
-  " onmouseover="this.style.borderColor='var(--accent)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 28px rgba(52,211,153,0.12)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='';this.style.boxShadow=''">
-    <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent3),var(--accent));"></div>
-    <div style="font-family:var(--mono);font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:0.5rem;">April 9, 2026</div>
-    <div style="font-family:'Instrument Serif',serif;font-size:1.4rem;color:var(--text);margin-bottom:0.35rem;line-height:1.1;">Day 3</div>
-    <div style="font-size:0.78rem;color:var(--muted);margin-bottom:1.2rem;line-height:1.5;">Statistics &amp; Machine Learning</div>
-    <div style="display:inline-flex;align-items:center;gap:0.4rem;font-family:var(--mono);font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);background:var(--accent-dim);border:1px solid var(--border);border-radius:4px;padding:0.35rem 0.8rem;">
-      Open Guide <span>↗</span>
-    </div>
-  </a>
-
-</div>
   </div>
 </section>
 <div class="divider"></div>
